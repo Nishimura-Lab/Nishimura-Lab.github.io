@@ -3,9 +3,7 @@
 
 **プロキシの設定**
 
-Windowsでは環境変数を
-
+Windowsでは環境変数を  
 - HTTP_PROXY → proxy.oita-ct.ac.jp:80
 - HTTPS_PROXY → proxy.oita-ct.ac.jp:80
-
 としておきます。
