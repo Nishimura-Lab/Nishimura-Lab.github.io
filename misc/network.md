@@ -9,8 +9,8 @@
 ## 解決策1（最初に一度やっておいてください）： プロキシを環境変数で指定
 
 Windowsの環境変数を  
-- HTTP_PROXY → proxy.oita-ct.ac.jp:80  
-- HTTPS_PROXY → proxy.oita-ct.ac.jp:80  
+- HTTP_PROXY → http://proxy.oita-ct.ac.jp:80  
+- HTTPS_PROXY → http://proxy.oita-ct.ac.jp:80  
 と設定しておきます。ツールがここを参照してくれるようであれば問題解決です。
 
 ## 解決策2： プロキシをそのツールで指定
