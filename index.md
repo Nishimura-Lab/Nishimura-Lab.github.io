@@ -3,5 +3,5 @@
 
 # 大分高専西村研究室 内部情報
 
-### [ネットワークの問題らしいとき](misc/network.html)
+### [学校のネットワークの問題らしいとき](misc/network.html)
 ### [英語の勉強](http://www.oita-ct.ac.jp/seigyo/nishimura_hp/Misc/StudyingEnglish.html)
