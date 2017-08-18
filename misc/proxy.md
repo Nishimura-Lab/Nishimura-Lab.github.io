@@ -3,7 +3,9 @@
 
 **プロキシの設定**
 
+大分高専のネットワークではプロキシを通してインターネットに接続することになっているので、時々不便なことが起きます。
+
 Windowsでは環境変数を  
 - HTTP_PROXY → proxy.oita-ct.ac.jp:80
 - HTTPS_PROXY → proxy.oita-ct.ac.jp:80
-としておきます。
+と設定しておきます。
