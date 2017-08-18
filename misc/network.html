@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!-- -*- Coding: utf-8 -*- -->
+  <title>大分高専 西村研究室</title>
+  <script type="text/javascript" src="//typesquare.com/accessor/script/typesquare.js?8tOfeaIMP3Q%3D" charset="utf-8"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-99016145-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+<body>
+<!-- > pandoc misc/network.md --include-in-header=header.txt -s -o misc/network.html -->
+<p><strong>ネットワークの問題らしいとき</strong></p>
+<p>継続的にネットと通信するツールなどを使う場合、大分高専のネットワークではうまくいかないかもしれません。 プロキシを通してインターネットに接続する、少し厳しめの設定となっているためです。</p>
+<p>** 解決策1（最初に一度やっておいてください）： プロキシを環境変数で指定</p>
+<p>Windowsの環境変数を<br />
+- HTTP_PROXY → proxy.oita-ct.ac.jp:80 - HTTPS_PROXY → proxy.oita-ct.ac.jp:80 と設定しておきます。ツールがここを参照してくれるようであれば問題解決です。</p>
+<p>** 解決策2： プロキシをそのツールで指定</p>
+<p>問題となっているツールにプロキシを設定するUIがあるなら、<br />
+- プロキシを自動検出する あるいは<br />
+- proxy.oita-ct.ac.jp:80 （:の前がURL、後がポート） と設定するとうまくいくはずです。</p>
+</body>
+</html>
