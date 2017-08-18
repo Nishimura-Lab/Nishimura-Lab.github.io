@@ -3,5 +3,5 @@
 
 **大分高専 西村研究室**
 
-- [プロキシの設定](misc/proxy.html)
+- [ネットワークの問題らしいとき](misc/network.html)
 - [英語の勉強](http://www.oita-ct.ac.jp/seigyo/nishimura_hp/Misc/StudyingEnglish.html)
