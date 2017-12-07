@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><head><title>システム工学 第05回</title><link rel="stylesheet" type="text/css" href="../../css/note.css"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-99016145-1', 'auto');ga('send', 'pageview');</script></head><body><!-- 先週の漢直 -->
+<!-- ゲーム -->
+<!-- breakの前振り2人 -->
+<div class="figure">
+<img src="../Figure/0_0.png" />
+
+</div>
+<h1 id="第3章-ソフトウェア開発の基本技術分析と設計">第3章 ソフトウェア開発の基本技術（分析と設計）</h1>
+<blockquote>
+<p>P.082上</p>
+</blockquote>
+<div class="figure">
+<img src="../Figure/3_1.png" />
+
+</div>
+<p>ソフトウェア開発べは何度も分析と設計が行われる</p>
+<blockquote>
+<p>P.082中</p>
+</blockquote>
+<p>この授業では各技術の位置付けを学ぶ。<br />
+より実用的な技術については各自が必要に応じて学ぶ。</p>
+<h2 id="ソフトシステムアプローチ">3.1 ソフトシステムアプローチ</h2>
+<h3 id="システムを作る目的">システムを作る目的</h3>
+<blockquote>
+<p>P.084上</p>
+</blockquote>
+<p>関係者全員が喜ぶシステムを作れるか？</p>
+<blockquote>
+<p>P.084下</p>
+</blockquote>
+<p>↑は難しい。なので先人の知恵が必要。</p>
+<h3 id="問題解決のためのアプローチ">問題解決のためのアプローチ</h3>
+<blockquote>
+<p>P.085中</p>
+</blockquote>
+<ul>
+<li>ハードシステムアプローチ： 明確な問題に対する</li>
+<li>ソフトシステムアプローチ： 不明確な～</li>
+</ul>
+<h3 id="ソフトシステム方法論ssm">ソフトシステム方法論(SSM)</h3>
+<blockquote>
+<p>P.086上</p>
+</blockquote>
+<p>理想を言えば、顧客のビジネスを深く理解した上で分析すべき</p>
+<blockquote>
+<p>P.086中～</p>
+</blockquote>
+<p>↑は難しいのでSSMというものが考えられた</p>
+<blockquote>
+<p>P.087中</p>
+</blockquote>
+<div class="figure">
+<img src="../Figure/3_2.png" />
+
+</div>
+<p>(break: No.43, No.36)</p>
+<h2 id="構造化分析設計">3.2 構造化分析・設計</h2>
+<blockquote>
+<p>P.089上</p>
+</blockquote>
+<div class="figure">
+<img src="../Figure/3_3.png" />
+
+</div>
+<p>順次・選択・繰返し で表す</p>
+<blockquote>
+<p>P.089下～</p>
+</blockquote>
+<div class="figure">
+<img src="../Figure/3_4.png" />
+
+</div>
+<blockquote>
+<p>P.090中</p>
+</blockquote>
+<div class="figure">
+<img src="../Figure/3_5.png" />
+
+</div>
+<p>複雑な要求を分析する際には何らかの手法を使うべき</p>
+<blockquote>
+<p>P.091下</p>
+</blockquote>
+<ul>
+<li>構造化分析： 機能に注目</li>
+<li>オブジェェクト指向分析： モノに注目</li>
+</ul>
+<blockquote>
+<p>P.092上～</p>
+</blockquote>
+<div class="figure">
+<img src="../Figure/3_6.png" />
+
+</div>
+<blockquote>
+<p>P.093上</p>
+</blockquote>
+<div class="figure">
+<img src="../Figure/3_7.png" />
+
+</div>
+<blockquote>
+<p>P.093下～</p>
+</blockquote>
+<div class="figure">
+<img src="../Figure/3_8.png" />
+
+</div>
+<p>構造化設計ではデータの重複が発生しがち</p>
+<h3 id="データフローダイヤグラムdfd">データフローダイヤグラムDFD</h3>
+<blockquote>
+<p>P.095中</p>
+</blockquote>
+<div class="figure">
+<img src="../Figure/3_9.png" />
+
+</div>
+<p>データに注目した表現</p>
+<h2 id="データ中心設計">3.3 データ中心設計</h2>
+<blockquote>
+<p>P.096上</p>
+</blockquote>
+<div class="figure">
+<img src="../Figure/3_10.png" />
+
+</div>
+<p>構造化設計ではデータ重複の問題があった<br />
+→ データ中心設計</p>
+<blockquote>
+<p>P.096上</p>
+</blockquote>
+<div class="figure">
+<img src="../Figure/3_11.png" />
+
+</div>
+<div class="figure">
+<img src="../Figure/3_12.png" />
+
+</div>
+<blockquote>
+<p>P.098上</p>
+</blockquote>
+<p>データベースを設計 → 処理を設計</p>
+<blockquote>
+<p>P.098上</p>
+</blockquote>
+<p>データ中心だと…<br />
+- 変更に強い<br />
+- 顧客に説明しやすい</p>
+<p>(closing: bouncy)</p><hr><p>教科書（図はすべてこちらより引用）：<br><b>　鶴保征城，駒谷昇一著 “ずっと受けたかった ソフトウェアエンジニアリングの授業1” 翔泳社</b></p></body></html>

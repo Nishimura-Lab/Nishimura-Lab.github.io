@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="the.css" type="text/css" />
+</head>
+<body>
+<!-- > pandoc tutorial.md  -c the.css -s -o tutorial.html -->
+<h1 id="なぜバージョン管理システムが必要">なぜバージョン管理システムが必要？</h1>
+<p><a href="https://www.backlog.jp/git-guide/intro/intro1_1.html">サルでもわかるGit入門</a></p>
+<h1 id="gitのインストール">Gitのインストール</h1>
+<p>実験室のPCはインストールが許可されていないので、Potable版をUSBメモリにインストールします。</p>
+<p><a href="https://github.com/git-for-windows/git/releases/download/v2.14.2.windows.1/PortableGit-2.14.2-64-bit.7z.exe">Downloading Git</a></p>
+<p>インストール先を F:と指定する。</p>
+<p>Windows PowerShellを開く（windows左下の検索から探すなど）</p>
+<p><code>&gt; Set-Alias git F:\PortableGit\bin\git.exe</code> （gitと打てばこれが実行されるように）</p>
+<p><code>&gt; git --version</code> → 表示を確認</p>
+<p><code>&gt; git config --global user.name &quot;xxx&quot;</code></p>
+<p><code>&gt; git config --global user.email &quot;yyy@zzz.jp&quot;</code> （最初に名前とメアドの設定が必須）</p>
+<h1 id="一人で使う">一人で使う</h1>
+<div class="figure">
+<img src="local.png" />
+
+</div>
+<h2 id="リポジトリ作成コミット">リポジトリ作成→コミット</h2>
+<p><code>&gt; mkdir xxx</code></p>
+<p><code>&gt; cd xxx</code></p>
+<p><code>&gt; git init</code> （リポジトリ作成）</p>
+<ul>
+<li>yyy.txt を作成</li>
+</ul>
+<p><code>&gt; git add yyy.txt</code> （ファイルをリポジトリに登録）</p>
+<p><code>&gt; git commit yyy.txt --message &quot;zzz&quot;</code> （変更をcommit）</p>
+<p><code>&gt; git log</code> （ログを見る）</p>
+<h2 id="再コミット">再コミット</h2>
+<ul>
+<li>yyy.txt を編集</li>
+</ul>
+<p><code>&gt; git commit yyy.txt --message &quot;ZZZ&quot;</code></p>
+<p><code>&gt; git log</code></p>
+<h2 id="以前のバージョンに戻す">以前のバージョンに戻す</h2>
+<p><code>&gt; git log</code></p>
+<p><code>&gt; git reset --hard xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</code> （ログを見てどれか指定する）</p>
+<h1 id="オンラインで使う">オンラインで使う</h1>
+<div class="figure">
+<img src="remote.png" />
+
+</div>
+<h2 id="githubアカウント作成">GitHubアカウント作成</h2>
+<p><a href="https://github.com/">GitHub</a></p>
+<p><strong>注意</strong>：メールアドレスの確認があるので、すぐに受信できるメアドで登録すること</p>
+<h2 id="sshの準備">SSHの準備</h2>
+<p><code>&gt; $env:home = &quot;F:&quot;</code> （今後の作業のために環境変数を一時的に変更）</p>
+<p><code>&gt; F:/PortableGit/usr/bin/ssh-keygen.exe</code> （SSH用の鍵を作成。いろいろ聞いてくるが全てEnter）</p>
+<p>F:/.ssh の下にできた公開鍵(id_rsa.pub)をGitHubに登録</p>
+<ul>
+<li>右上のアイコン → Settings → 左の列からSSH and GPG keys → New SSH Key → Keyの中にペースト</li>
+</ul>
+<h2 id="remoteリポジトリを作成">remoteリポジトリを作成</h2>
+<p>（進む前にメアドの認証をしておくこと）</p>
+<p>GitHubの右上の＋(プラス) → New repository → リポジトリ名決めてcreate</p>
+<p><code>&gt; git remote add origin git@github.com:xxx/yyy.git</code> （xxx：ユーザ名，yyy：リポジトリ名）</p>
+<p><code>&gt; git push origin master</code></p>
+<p>（are you sure と聞かれたら yes）</p>
+<p>GitHubをリロードしてみるとファイルが見えるはず。</p>
+<h1 id="複数人で使う">複数人で使う</h1>
+<div class="figure">
+<img src="group.png" />
+
+</div>
+<h2 id="リーダのみグループのorganizationリポジトリを作成">！！リーダのみ！！グループのorganizationリポジトリを作成</h2>
+<p><strong>グループのリーダのみが行ってください</strong></p>
+<p>GitHubの右上の＋(プラス) → New organization</p>
+<p>グループのメンバーを登録する</p>
+<p>グループの共用リポジトリを作成</p>
+<p><code>&gt; git remote add origin git@github.com:xxx/yyy.git</code> （xxx：organization名，yyy：共用リポジトリ名）</p>
+<p>（remote origin already exists と言われたら <code>&gt; git remote remove origin</code> してから）</p>
+<p><code>&gt; git push origin master</code></p>
+<h2 id="メンバーはそれぞれclone">メンバーはそれぞれclone</h2>
+<p><code>&gt; git clone git@github.com:xxx/yyy.git</code></p>
+<h2 id="課題1全員が自分の名前のファイルを追加する">課題1：全員が自分の名前のファイルを追加する</h2>
+<p>cloneしたリポジトリについてのpushは <code>&gt; git push</code> だけでOK。（元リポジトリが分かっているので）</p>
+<h2 id="課題2他人が作成したファイルを書き換えてみる">課題2：他人が作成したファイルを書き換えてみる</h2>
+</body>
+</html>

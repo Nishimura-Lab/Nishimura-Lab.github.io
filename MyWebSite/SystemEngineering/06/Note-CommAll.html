@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><head><title>システム工学 第06回</title><link rel="stylesheet" type="text/css" href="../../css/note.css"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-99016145-1', 'auto');ga('send', 'pageview');</script></head><body><!-- breakの前振り2人 -->
+<!-- コメント見えます -->
+<!-- 教科書にやじるし -->
+<div class="figure">
+<img src="../Figure/3_12+.png" />
+
+</div>
+<p><code>！</code>　<code>？</code>　<code>！</code>　<code>？</code>　<code>！</code>　<code>！</code>　<code>？</code>　<code>！</code>　<code>聞こえません</code>　<code>聞こえません</code>　<code>！</code>　<code>まじか…</code>　<code>！</code>　</p>
+<h2 id="オブジェクト指向分析設計">3.4 オブジェクト指向分析・設計</h2>
+<blockquote>
+<p>P.099上</p>
+</blockquote>
+<p>構造化＝トップダウン<br />
+　 vs　オブジェクト指向＝ボトムアップ</p>
+<blockquote>
+<p>P.099中</p>
+</blockquote>
+<p>構造化＝機能中心<br />
+　vs 　オブジェクト指向＝オブジェクト中心</p>
+<blockquote>
+<p>P.099下～</p>
+</blockquote>
+<ul>
+<li>オブジェクトは内部状態を持つ</li>
+<li>内部状態にはメソッドでアクセスする</li>
+</ul>
+<p>メリット： メソッドに変更がなければオブゼクト内部のつくりは自由</p>
+<p><code>スクロールお願いします！</code>　</p>
+<blockquote>
+<p>P.100中</p>
+</blockquote>
+<blockquote>
+<p>P.100上～</p>
+</blockquote>
+<p>オブジェクトに注目するにしても、さまざまな見方があり得る。<br />
+なので、システムの目的にあった見方をする必要がある。</p>
+<blockquote>
+<p>P.101下～</p>
+</blockquote>
+<p>目に見えないものもオブジェクトとして扱える</p>
+<h3 id="なぜオブジェクト指向なのか">なぜオブジェクト指向なのか</h3>
+<blockquote>
+<p>P.102中</p>
+</blockquote>
+<div class="figure">
+<img src="../Figure/3_13.png" />
+
+</div>
+<p>プログラミング言語より豊富な記述力がある</p>
+<blockquote>
+<p>P.102下</p>
+</blockquote>
+<div class="figure">
+<img src="../Figure/3_14.png" />
+
+</div>
+<h4 id="カプセル化">カプセル化</h4>
+<div class="figure">
+<img src="../Figure/3_15.png" />
+
+</div>
+<p>処理vsデータ問題に対する解として、オブジェクト指向では、 <em>処理とデータを一体化する</em> （メソッドを通して内部状態にアクセスする）</p>
+<h4 id="抽象化クラスオブジェクト">抽象化（クラス、オブジェクト）</h4>
+<blockquote>
+<p>P.105上</p>
+</blockquote>
+<div class="figure">
+<img src="../Figure/3_16.png" />
+
+</div>
+<p>なかまをまとめる考え方</p>
+<h4 id="メッセージ">メッセージ</h4>
+<blockquote>
+<p>P.016中</p>
+</blockquote>
+<p>オブジェクトへの処理求に付加して送る情報</p>
+<h4 id="階層化と継承">階層化と継承</h4>
+<blockquote>
+<p>P.016上</p>
+</blockquote>
+<div class="figure">
+<img src="../Figure/3_17.png" />
+
+</div>
+<p>クラスのクラスも考えられる。<br />
+継承： 上位クラスのきまりが下位クラスに引き継がれること</p>
+<p><code>誤記w</code>　</p>
+<h4 id="ポルモーフィズム">ポルモーフィズム</h4>
+<blockquote>
+<p>P.107下</p>
+</blockquote>
+<div class="figure">
+<img src="../Figure/3_18.png" />
+
+</div>
+<p>異なるクラスだげど共通部分もある場合にこの考え方が有効。<br />
+異なるクラスに共通のメソッドを持たせるなど。</p>
+<blockquote>
+<p>P.109上</p>
+</blockquote>
+<p>リファクタリング： 機能はそのままだが構造を見直す</p>
+<p>(break: No.15, No.2)</p>
+<p><code>免許試験が好き</code>　<code>！</code>　</p>
+<h2 id="モデルとモデリングについて">3.5 モデルとモデリングについて</h2>
+<blockquote>
+<p>P.111上</p>
+</blockquote>
+<p>モデリング： 約束ごとの下での図の表現</p>
+<blockquote>
+<p>P.111下</p>
+</blockquote>
+<blockquote>
+<p>P.112上</p>
+</blockquote>
+<div class="figure">
+<img src="../Figure/3_20.png" />
+
+</div>
+<div class="figure">
+<img src="../Figure/3_21.png" />
+
+</div>
+<p>モデリングは上流工程に有効</p>
+<h3 id="統一モデリング言語uml">統一モデリング言語UML</h3>
+<blockquote>
+<p>P.113中</p>
+</blockquote>
+<ul>
+<li>ユースケース図</li>
+<li>アクティビティ図</li>
+<li><p>クラス図</p></li>
+<li>ER(Entity Relationship)図</li>
+<li><p>DFD(Data Flow Diagram)</p></li>
+</ul>
+<blockquote>
+<p>P.114上</p>
+</blockquote>
+<p>UMLにも短所はある</p>
+<h2 id="組込みソフトウェア">3.6 組込みソフトウェア</h2>
+<blockquote>
+<p>P.115上</p>
+</blockquote>
+<p>組込みソフトの不具合は人命に関わるので問題</p>
+<blockquote>
+<p>P.115下</p>
+</blockquote>
+<p>これまでやってきたのは、<br />
+- 構造化： プロセスに注目 - データ中心： データに注目 - オブジェクト指向：オブジェクトに注目</p>
+<blockquote>
+<p>P.116上</p>
+</blockquote>
+<p>組込みシステムに対しては、 <em>状態</em> に注目する考え方がマッチする</p>
+<blockquote>
+<p>P.117上</p>
+</blockquote>
+<div class="figure">
+<img src="../Figure/3_22.png" />
+
+</div>
+<div class="figure">
+<img src="../Figure/3_23.png" />
+
+</div>
+<ul>
+<li>状態遷移図：見やすいがヌケモレの可能性あり</li>
+<li>状態遷移表： 見にくいがヌケモレの防げる</li>
+</ul>
+<blockquote>
+<p>P.119中</p>
+</blockquote>
+<blockquote>
+<p>P.120上</p>
+</blockquote>
+<blockquote>
+<p>P.120下～</p>
+</blockquote>
+<p>アーキテクトは技術を知りつつ顧客目線で考える</p>
+<p><code>！</code>　<code>！</code>　</p><hr><p>教科書（図はすべてこちらより引用）：<br><b>　鶴保征城，駒谷昇一著 “ずっと受けたかった ソフトウェアエンジニアリングの授業1” 翔泳社</b></p></body></html>

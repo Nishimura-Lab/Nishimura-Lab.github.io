@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>リキッドデザイン２カラム</title>
+<style>
+/* リセット -----------------------------------------------*/
+body, div, p, ul, li, a, h1 {
+		margin: 0;
+		padding: 0;
+}
+ul {
+  list-style:none;		
+}
+/*  2カラム---------------------------------------------------*/
+#wrapper {
+　width: 100%;
+  line-height: 1.7;		
+}
+#header {
+  background: #DDD;
+  padding: 10px;	
+}
+#container {
+  float: left;
+  width: 100%;		
+}
+#primary {
+  float: right;
+  width: 100%;
+  margin: 10px 0 10px -145px;/*  左方向に負のマージンを指定  */
+  background: #C7D;
+}
+#content {
+  margin-left: 155px;
+  padding: 10px;
+  background:#cdd;
+}
+#secondary {
+  float: left;
+  width: 145px;
+  margin: 10px 0 10px 0;	
+  background:#9FC;	
+}
+#footer {
+  clear: both;
+  text-align: center;
+  height: 50px;
+  line-height: 50px; /* line-heightとheightの高さをあわせる */
+  background:#FF9933; 		
+}
+</style>
+</head>
+<body>
+<div id="wrapper">
+  <div id="header">
+    <h1>リキッド2カラム</h1>
+  </div>
+  <!-- header end -->
+  <div id="container">
+    <div id="primary">
+      <div id="content">
+      こんにちはこんにちはこんにちはこんにちはこんにちはこんにちは<br>こんにちはこんにちはこんにちはこんにちはこんにちはこんにちは<br>こんにちはこんにちはこんにちはこんにちは 
+      </div><!-- content end --> 
+    </div><!-- primary end --> 
+    <div id="secondary">
+      <ul>
+        <li>リスト１</li>
+        <li>リスト２</li>
+        <li>リスト３</li>
+        <li>リスト４</li>
+      </ul>
+    </div><!-- secondary end --> 
+  </div><!-- container end --> 
+  <div id="footer">
+    <small>&copy;&2013 ○○××</small>
+  </div><!-- footer end -->
+</div><!-- wrapper end -->
+</body>
+</html>

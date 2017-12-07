@@ -1,0 +1,83 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><head><title>システム工学 第24回</title><link rel="stylesheet" type="text/css" href="../../css/SystemEngineeringNote.css"/><script type="text/javascript" src="//typesquare.com/accessor/script/typesquare.js?8tOfeaIMP3Q%3D" charset="utf-8"/><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-99016145-1', 'auto');ga('send', 'pageview');</script></head><body><br/><a href="../../systemEngineering.html">一覧に戻る</a><br/>
+
+
+
+
+
+
+<div class="figure">
+<img src="../Figure/12_0.png"/>
+
+</div>
+<h1 id="第12章-プログラミング工程">第12章 プログラミング工程</h1>
+<h2 id="プログラミング工程とは">12.1 プログラミング工程とは</h2>
+<div class="figure">
+<img src="../Figure/12_1.png"/>
+
+</div>
+<p>プログラミングだけではない</p>
+<p><a href="http://systemeng-thru-line-server.herokuapp.com/web-q?24&amp;1" id="Q24-1] プログラミング工程ではやらないものを選んでくださ">[Q24-1] プログラミング工程ではやらないものを選んでください</a></p>
+<h2 id="プログラミング工程の作業内容">12.2 プログラミング工程の作業内容</h2>
+<p>((図12.2))</p>
+<h3 id="ソースコードの作成">ソースコードの作成</h3>
+<h4 id="ソースコード作成における取り決めを作成">ソースコード作成における取り決めを作成</h4>
+<h4 id="単体テスト実施手順書の作成">単体テスト実施手順書の作成</h4>
+<h4 id="ソースコード作成環境およびテスト環境の構築">ソースコード作成環境およびテスト環境の構築</h4>
+<h4 id="バグ管理の手順や報告様式の整え管理ツールの導入">バグ管理の手順や報告様式の整え、管理ツールの導入</h4>
+<h4 id="内部設計書をもとにソースコードを作成">内部設計書をもとにソースコードを作成</h4>
+<h3 id="コンパイルエラーの除去">コンパイルエラーの除去</h3>
+<h3 id="ソースコードレビュの実施">ソースコードレビュの実施</h3>
+<h3 id="単体テスト">単体テスト</h3>
+<h4 id="テストデータの作成">テストデータの作成</h4>
+<h4 id="スタブドライバの作成">スタブ、ドライバの作成</h4>
+<p>ドライバ：テスト対象を呼び出す</p>
+<blockquote>
+<p>P.124上</p>
+</blockquote>
+<p>スタブ：下位モジュールの代わりをする</p>
+<h3 id="単体テストのテスト項目の洗い出し">単体テストのテスト項目の洗い出し</h3>
+<h3 id="単体テストの実施">単体テストの実施</h3>
+<h3 id="バグ対処">バグ対処</h3>
+<h4 id="障害処理票の起票">障害処理票の起票</h4>
+<h4 id="バグの分析">バグの分析</h4>
+<p>プログラミング工程といってもプログラミング<strong>だけではない</strong></p>
+<p><a href="http://systemeng-thru-line-server.herokuapp.com/web-q?24&amp;2" id="Q24-2] プログラミング工程でやるものを選んでくださ">[Q24-2] プログラミング工程でやるものを選んでください</a></p>
+<h2 id="プログラミング工程での取り決め">12.3 プログラミング工程での取り決め</h2>
+<h3 id="ソースコード作成における取り決めの作成">ソースコード作成における取り決めの作成</h3>
+<p>((図12.3))</p>
+<h3 id="プログラミング規約">プログラミング規約</h3>
+<p>変数名やファイル名の名命名則など</p>
+<blockquote>
+<p>P.127</p>
+</blockquote>
+<p>あらがじめ決めておくと他人のコードも読みやすい</p>
+<h3 id="クラス設計">クラス設計</h3>
+<h3 id="クラスやメソッドとデータとの関係">クラスやメソッドとデータとの関係</h3>
+<h3 id="共有フォルダの更新方法">共有フォルダの更新方法</h3>
+<h3 id="テスト項目の選定方法テスト実施方法">テスト項目の選定方法、テスト実施方法</h3>
+<h3 id="障害処理票の起票方法">障害処理票の起票方法</h3>
+<h2 id="ソースコードの作成-1">ソースコードの作成</h2>
+<p>((図12.4))</p>
+<p>コードレビュを行う</p>
+<p><strong>コーディングを始める前に書き方を決めておく</strong></p>
+<p><a href="http://systemeng-thru-line-server.herokuapp.com/web-q?24&amp;3" id="Q24-3] プログラミング規約に相当するものを選んでくださ">[Q24-3] プログラミング規約に相当するものを選んでください</a></p>
+<h2 id="ソーコードレビュの準備と実施">12.4 ソーコードレビュの準備と実施</h2>
+<h3 id="ソースコードレビュの目的">ソースコードレビュの目的</h3>
+<p>内部設計と照らし合わせる</p>
+<h3 id="ソースコードレビュの実施方法">ソースコードレビュの実施方法</h3>
+<div class="figure">
+<img src="../Figure/12_5.png"/>
+
+</div>
+<p>ウォークスルーが適している</p>
+<h3 id="ウォークスルーによるソースコードレビュの実施方法">ウォークスルーによるソースコードレビュの実施方法</h3>
+<p>((図12.6))</p>
+<blockquote>
+<p>P.132上</p>
+</blockquote>
+<p>内部設計書を参照しながら</p>
+<blockquote>
+<p>P.132下</p>
+</blockquote>
+<p>指摘事項を記録表に記入する</p>
+<p><a href="http://systemeng-thru-line-server.herokuapp.com/web-q?24&amp;4" id="Q24-4] ソースコードレビュで主に参照する文書を選んでくださ">[Q24-4] ソースコードレビュで主に参照する文書を選んでください</a></p><hr/><p>教科書（図はすべてこちらより引用）：<br/><b>　鶴保征城，駒谷昇一著 “ずっと受けたかった ソフトウェアエンジニアリングの授業2” 翔泳社</b></p><a href="../../systemEngineering.html">一覧に戻る</a><br/><br/></body>
