@@ -5,6 +5,8 @@
 
 ## Desktop
 
+| | | | | |
+|--|--|--|--|--|
 | HP Pavilion | | AMD A10-6700 | 4GB | 大里さん |
 |  | |  | GB | 佐藤さん |
 | HP Pavilion | | AMD A10-6700 | 4GB | 田口さん |
@@ -15,5 +17,7 @@
 
 ## Laptop
 
+| | | | | |
+|--|--|--|--|--|
 | ASUS ZENBOOK BX310UA | S/N# HCN0CV02Y793498 | Intel Core i5 | 8GB | 佐藤さん？ |
 | ASUS ZENBOOK BX310UA | S/N# HCN0CV02Y833499 | Intel Core i5 | 8GB | 渡邊さん？ |
