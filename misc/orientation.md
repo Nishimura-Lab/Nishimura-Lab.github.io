@@ -1,5 +1,5 @@
 <!-- -*- Coding: utf-8 -*- -->
-<!-- > pandoc orientation.md --include-in-header=header.txt -s -o orientation.html -->
+<!-- > pandoc orientation.md --include-in-header=../header.txt -s -o orientation.html -->
 
 # 4/12オリエンテーション
 石丸さん大飛さん後藤さん古林さん渕さん、西村研へようこそ。
