@@ -1,6 +1,17 @@
 <!-- -*- Coding: utf-8 -*- -->
 <!-- > pandoc orientation.md --include-in-header=../header.txt -s -o orientation.html -->
 
+# 4/12以降
+## 学校の有線LAN問題
+調査に時間がかかるかもしれません。解決するまでは
+
+　Softbank Airの背面のLANポート→HUB→皆さんのPC
+
+とするのが良さそうです。
+
+## 事務連絡の手段
+LINEじゃなくてslackが良さそうですね。まずはgithubのアカウント名(工学実験VIで作成したもの可)を西村に連絡してみてください。
+
 # 4/12オリエンテーション
 石丸さん大飛さん後藤さん古林さん渕さん、西村研へようこそ。
 
