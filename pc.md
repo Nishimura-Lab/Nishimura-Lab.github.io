@@ -5,15 +5,15 @@
 
 ## Desktop
 
-| 通称 | シリアルNo | CPU | メモリ | 使用者  |
-|--|--|--|--|--|
-| HP Pavilion | | AMD A10-6700 | 4GB | 大里さん |
-|  | | Intel Xeon | GB | 佐藤さん |
-| HP Pavilion | | AMD A10-6700 | 4GB | 田口さん |
-| HP Slimline 260 | | Intel Core i3 | 4GB | 田中さん |
-| DELL Vostro 220s | | Intel Core2 Duo | 3GB | 荷宮さん |
-| DELL Vostro | | Intel Core i5 | 4GB | 渡邊さん |
-| HP Slimline | | | 4GB | 未使用（教員室） |
+| 通称 | シリアルNo | CPU | メモリ | 使用者  | 備考 |
+|--|--|--|--|--|--|
+| HP Pavilion | | AMD A10-6700 | 4GB | who? ||
+|  | | Intel Xeon | GB | 佐藤さん ||
+| HP Pavilion | | AMD A10-6700 | 4GB | who? ||
+| HP Slimline 260 | | Intel Core i3 | 4GB | who? ||
+| DELL Vostro 220s | | Intel Core2 Duo | 3GB | who? ||
+| DELL Vostro | | Intel Core i5 | 4GB | 渡邊さん | こわれた？ |
+| HP Slimline | | | 4GB | 後藤さん ||
 
 ## Laptop
 
