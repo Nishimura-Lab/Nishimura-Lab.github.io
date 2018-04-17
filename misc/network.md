@@ -1,5 +1,5 @@
 
-<!-- > pandoc misc/network.md --include-in-header=header.txt -s -o misc/network.html -->
+<!-- > pandoc misc/network.md --include-in-header=header.txt -s -o misc/network.htmlxb -->
 
 # 学内ネットワーク接続
 
