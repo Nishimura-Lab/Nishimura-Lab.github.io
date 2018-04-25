@@ -138,7 +138,7 @@ case'table':{var body='',heading,i,row,cell,j;body+='<thead>\n<tr>\n';for(i=0;i<
 body+='</tr>\n</thead>\n';body+='<tbody>\n'
 for(i=0;i<this.token.cells.length;i++){row=this.token.cells[i];body+='<tr>\n';for(j=0;j<row.length;j++){cell=this.inline.output(row[j]);body+=this.token.align[j]?'<td align="'+this.token.align[j]+'">'+cell+'</td>\n':'<td>'+cell+'</td>\n';}
 body+='</tr>\n';}
-body+='</tbody>\n';return'<table>\n'
+body+='</tbody>\n';return'<table BORDER="1">\n'
 +body
 +'</table>\n';}
 case'blockquote_start':{var body='';while(this.next().type!=='blockquote_end'){body+=this.tok();}
