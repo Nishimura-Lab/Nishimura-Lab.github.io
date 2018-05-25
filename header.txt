@@ -1,4 +1,4 @@
-<!-- -*- Coding: utf-8 -*- -->
+﻿<!-- -*- Coding: utf-8 -*- -->
 <title>大分高専 西村研究室</title>
 <script type="text/javascript" src="//typesquare.com/accessor/script/typesquare.js?8tOfeaIMP3Q%3D" charset="utf-8"></script>
 <script>
