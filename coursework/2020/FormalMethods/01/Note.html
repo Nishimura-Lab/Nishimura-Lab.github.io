@@ -1,4 +1,103 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><head><title>形式手法 第01回</title><link rel="stylesheet" type="text/css" href="../../../../css/WebNote.css"/><script type="text/javascript" src="//typesquare.com/3/tsst/script/ja/typesquare.js?6BWGiwGCtww%3D" charset="utf-8"/><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-99016145-1', 'auto');ga('send', 'pageview');</script></head><body><br/><a href="../index.html">一覧に戻る</a><br/><div class="figure">
 <img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/FormalMethods/Figure/1_0.png"/>
 
+</div>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/FormalMethods/01/Whole1.png"/>
+
+</div>
+<h1 id="章-論理で考える">1章 論理で考える</h1>
+<h2 id="形式手法の概要">1.1 形式手法の概要</h2>
+<h3 id="高信頼化の総合技術">1.1.1 高信頼化の総合技術</h3>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/FormalMethods/Figure/1_1.png"/>
+
+</div>
+<p>形式手法： 高信頼性への技術アプローチ</p>
+<blockquote>
+<p>P.1下～</p>
+</blockquote>
+<p>レビュー、テスト： 行う人による</p>
+<blockquote>
+<p>P.2下～</p>
+</blockquote>
+<p>形式仕様言語（こうなっているはず） ↓↑ プログラム・コード</p>
+<h3 id="複雑さと抽象化">1.1.2 複雑さと抽象化</h3>
+<p>テスト： バグを見つける 形式手法： バグがないことを示す</p>
+<blockquote>
+<p>P.3下～</p>
+</blockquote>
+<p>自然言語の仕様書はあいまい ↓ 仕様を厳密に表すべき → 形式仕様言語</p>
+<blockquote>
+<p>P.4中～</p>
+</blockquote>
+<p>抽象化により複雑さを避ける</p>
+<blockquote>
+<p>P.5上～</p>
+</blockquote>
+<p>数理論理（厳密） + 抽象化モデリング</p>
+<h2 id="工学的な道具">1.1.3 工学的な道具</h2>
+<p>形式仕様言語 ↓↑ 人手で証明？ プログラム</p>
+<blockquote>
+<p>P.5中～</p>
+</blockquote>
+<p>手動証明： 使いものにならない 自動証明： 完全には無理 なので、ちょどいい所を見つけなくてはならない。</p>
+<blockquote>
+<p>課題01-a</p>
+</blockquote>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/FormalMethods/01/Whole2.png"/>
+
+</div>
+<h2 id="発展の経緯">1.2 発展の経緯</h2>
+<h3 id="形式手法の変遷">1.2.1 形式手法の変遷</h3>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/FormalMethods/Figure/1_2.png"/>
+
+</div>
+<blockquote>
+<p>P.6下～</p>
+</blockquote>
+<p>全体に適用 vs 部分的に適用 rogrous vs light</p>
+<blockquote>
+<p>P.7下～</p>
+</blockquote>
+<p>仕様の表現力 vs 自動検証</p>
+<h3 id="設計法と形式手法">1.2.2 設計法と形式手法</h3>
+<p>形式手法は設計方法論とセットである</p>
+<blockquote>
+<p>P.8下～</p>
+</blockquote>
+<p>アルゴリズム → Hoareロジック</p>
+<blockquote>
+<p>P.9上～</p>
+</blockquote>
+<p>構造化設計 → VDM, Z</p>
+<blockquote>
+<p>P.9上～</p>
+</blockquote>
+<p>リアクティブ(並列)システム → ロジック・モデル検査</p>
+<blockquote>
+<p>P.9中～</p>
+</blockquote>
+<p>UML → 要使い分け</p>
+<blockquote>
+<p>P.9下～</p>
+</blockquote>
+<p>オブジェクト指向 → 要使い分け</p>
+<h3 id="形式仕様言語の分類">1.2.3 形式仕様言語の分類</h3>
+<ul>
+<li>モデル規範型</li>
+<li>性質規範型</li>
+</ul>
+<blockquote>
+<p>P.10下～</p>
+</blockquote>
+<p>他の視点でも分類できる</p>
+<blockquote>
+<p>課題01-b</p>
+</blockquote>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/FormalMethods/01/Whole3.png"/>
+
 </div><hr/><p>教科書（図はすべてこちらより引用）：<br/><b>　中島震，「形式手法入門―ロジックによるソフトウェア設計―」，オーム社</b></p><a href="../index.html">一覧に戻る</a><br/><br/></body>
