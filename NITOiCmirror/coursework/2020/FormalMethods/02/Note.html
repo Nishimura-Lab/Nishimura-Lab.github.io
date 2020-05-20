@@ -1,4 +1,75 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><head><title>形式手法 第02回</title><link rel="stylesheet" type="text/css" href="../../../../css/WebNote.css"/><script type="text/javascript" src="//typesquare.com/3/tsst/script/ja/typesquare.js?6BWGiwGCtww%3D" charset="utf-8"/><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-99016145-1', 'auto');ga('send', 'pageview');</script></head><body><br/><a href="../index.html">一覧に戻る</a><br/><div class="figure">
 <img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/FormalMethods/Figure/2_0.png"/>
 
-</div><hr/><p>教科書（図はすべてこちらより引用）：<br/><b>　中島震，「形式手法入門―ロジックによるソフトウェア設計―」，オーム社</b></p><a href="../index.html">一覧に戻る</a><br/><br/></body>
+</div>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/FormalMethods/02/Whole1.png"/>
+
+</div>
+<h1 id="章-指先で考える">2章 指先で考える</h1>
+<h2 id="alloy入門">2.1 Alloy入門</h2>
+<h3 id="alloyの面白さ">2.1.1 Alloyの面白さ</h3>
+<p>有限モデルに限定して自動検査する</p>
+<h3 id="compositeパターン">2.1.2 Compositeパターン</h3>
+<h4 id="alloy記述の基本">(1) Alloy記述の基本</h4>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/FormalMethods/Figure/2_1.png"/>
+
+</div>
+<blockquote>
+<p>module Composite</p>
+<p>abstract sig Component {}<br/>
+sig Composite extends Component {<br/>
+　children : set Component<br/>
+}<br/>
+sig Leaf extends Component {}</p>
+</blockquote>
+<blockquote>
+<p>P.15上～</p>
+</blockquote>
+<blockquote>
+<p>P.15下～</p>
+</blockquote>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/FormalMethods/Figure/2_3.png"/>
+
+</div>
+<ul>
+<li>childrenが自分自身<br/>
+</li>
+<li>親が2つある</li>
+</ul>
+<h4 id="制約条件の追加">(2) 制約条件の追加</h4>
+<blockquote>
+<p>P.17上～</p>
+</blockquote>
+<p>性質1をnoRefferedToとonlyRootで表現</p>
+<blockquote>
+<p>P.17下～</p>
+</blockquote>
+<p>性質2をsingleWholeで表現</p>
+<blockquote>
+<p>P.18中～</p>
+</blockquote>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/FormalMethods/Figure/2_4.png"/>
+
+</div>
+<p>求めるものに近付いた</p>
+<h4 id="表明の検査">(3) 表明の検査</h4>
+<blockquote>
+<p>show2[] implies noSelfLoop[]</p>
+</blockquote>
+<p>show2が成り立つならnoSelfLoopも成り立つ</p>
+<h4 id="書き方の補足説明">(4) 書き方の補足説明</h4>
+<p>abstractの説明</p>
+<blockquote>
+<p>P.20上～</p>
+</blockquote>
+<p>pred vs fact</p>
+<blockquote>
+<p>P.20中～ 省略</p>
+</blockquote>
+<blockquote>
+<p>確認問題02-a</p>
+</blockquote><hr/><p>教科書（図はすべてこちらより引用）：<br/><b>　中島震，「形式手法入門―ロジックによるソフトウェア設計―」，オーム社</b></p><a href="../index.html">一覧に戻る</a><br/><br/></body>
