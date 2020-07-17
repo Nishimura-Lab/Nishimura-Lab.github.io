@@ -1,4 +1,125 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><head><title>システム工学 第10回</title><link rel="stylesheet" type="text/css" href="../../../../css/WebNote.css"/><script type="text/javascript" src="//typesquare.com/3/tsst/script/ja/typesquare.js?6BWGiwGCtww%3D" charset="utf-8"/><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-99016145-1', 'auto');ga('send', 'pageview');</script></head><body><br/><a href="../index.html">一覧に戻る</a><br/><div class="figure">
 <img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemEngineering/Figure/10_0.png"/>
 
-</div><hr/><p>教科書（図はすべてこちらより引用）：<br/><b>　平山雅之 他,「ソフトウェア工学」, オーム社</b></p><a href="../index.html">一覧に戻る</a><br/><br/></body>
+</div>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemEngineering/10/Whole1.png"/>
+
+</div>
+<h1 id="第10章-ソフトウェアシステムの検証と動作確認">第10章 ソフトウェアシステムの検証と動作確認</h1>
+<h2 id="ソフトウェアの検証動作確認の基本的な考え方">10.1 ソフトウェアの検証・動作確認の基本的な考え方</h2>
+<h3 id="検証の考え方">1. 検証の考え方</h3>
+<p>ソフトウェア = プログラム + ドキュメント</p>
+<blockquote>
+<p>P.180上～</p>
+</blockquote>
+<p>①論理的な正しさ → 検証(verification)</p>
+<p>②ユーザの期待 → 妥当性確認(validation)</p>
+<h3 id="検証の方法">2. 検証の方法</h3>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemEngineering/Figure/10_1.png"/>
+
+</div>
+<p>動的検証</p>
+<p>静的検証</p>
+<blockquote>
+<p>P.181中～</p>
+</blockquote>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemEngineering/Figure/10_2.png"/>
+
+</div>
+<p>動的検証： テスト</p>
+<p>静的検証： レビューなど</p>
+<h2 id="ソフトウェアレビュー">10.2 ソフトウェアレビュー</h2>
+<h3 id="静的検証の種類">1. 静的検証の種類</h3>
+<h4 id="ソフトウェアレビュー-1">ソフトウェアレビュー</h4>
+<h4 id="プログラム解析">プログラム解析</h4>
+<h4 id="仕様検証">仕様検証</h4>
+<h3 id="ソフトウェアレビューの種類">2. ソフトウェアレビューの種類</h3>
+<h4 id="a-目的による分類">(a) 目的による分類</h4>
+<p>テクニカルレビュー</p>
+<p>マネジメントレビュー</p>
+<h4 id="b-実施時期による分類">(b) 実施時期による分類</h4>
+<h3 id="レビューの技法">3. レビューの技法</h3>
+<h4 id="a-ウォークスルー">(a) ウォークスルー</h4>
+<h4 id="b-フォーマルインスペクション">(b) フォーマルインスペクション</h4>
+<p>事前に問題点をリストアップしてから</p>
+<h3 id="レビュー実施時の工夫">4. レビュー実施時の工夫</h3>
+<h2 id="プログラム解析と形式的仕様検証">10.3 プログラム解析と形式的仕様検証</h2>
+<p>省略（2.は西村の専門分野）</p>
+<blockquote>
+<p>確認問題10-a</p>
+</blockquote>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemEngineering/10/Whole2.png"/>
+
+</div>
+<h2 id="ソフウェアテスト">10.4 ソフウェアテスト</h2>
+<h3 id="ソフトウェアテストの役割と限界">1. ソフトウェアテストの役割と限界</h3>
+<p>プログラムの動作を確認</p>
+<blockquote>
+<p>P.188下～</p>
+</blockquote>
+<p>全開発期間の30%かけるのが理想</p>
+<blockquote>
+<p>P.189上～</p>
+</blockquote>
+<p>テストではバグがないことの保証はできない</p>
+<h3 id="テストの種類と方法">2. テストの種類と方法</h3>
+<h4 id="a-テスト時期による区分">(a) テスト時期による区分</h4>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemEngineering/Figure/10_7.png"/>
+
+</div>
+<p>①単体テスト</p>
+<p>②結合テスト</p>
+<p>複数のモジュールを結合して</p>
+<p>③システムテスト</p>
+<p>④受入れテスト</p>
+<p>顧客と一緒に</p>
+<h4 id="b-テスト方法による区分">(b) テスト方法による区分</h4>
+<p>①ホワイトボックステスト</p>
+<p>内部を分かった上で</p>
+<p>②ブラックボックステスト</p>
+<p>外部からの視点で</p>
+<p>③状態遷移テスト</p>
+<h4 id="c-テスト観点による区分">(c) テスト観点による区分</h4>
+<p>省略</p>
+<h3 id="テストの手順">3. テストの手順</h3>
+<p>省貧c ### 4. テスト項目の作成</p>
+<h4 id="a-ブラックボックステストのテスト項目作成">(a) ブラックボックステストのテスト項目作成</h4>
+<p>①同値分割法</p>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemEngineering/Figure/10_10.png"/>
+
+</div>
+<p>同様の値は代表のみに</p>
+<p>②限界値・境界値分析</p>
+<p>③デシジョンテーブル</p>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemEngineering/Figure/10_11.png"/>
+
+</div>
+<h4 id="b-ホワイトボックステストのテスト項目作成">(b) ホワイトボックステストのテスト項目作成</h4>
+<p>①命令網羅テスト (C0)</p>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemEngineering/Figure/10_12.png"/>
+
+</div>
+<p>図の(a)</p>
+<p>②分岐網羅テスト (C1)</p>
+<p>図の(b)</p>
+<p>③条件網羅テスト (C2)</p>
+<p>図の(c)</p>
+<blockquote>
+<p>P.198上～</p>
+</blockquote>
+<h3 id="テスト項目の最適化">5. テスト項目の最適化</h3>
+<p>省略</p>
+<h3 id="テスト環境の準備">6. テスト環境の準備</h3>
+<p>省略</p>
+<blockquote>
+<p>確認問題10-b</p>
+</blockquote>
+<p>レポート8</p><hr/><p>教科書（図はすべてこちらより引用）：<br/><b>　平山雅之 他,「ソフトウェア工学」, オーム社</b></p><a href="../index.html">一覧に戻る</a><br/><br/></body>
