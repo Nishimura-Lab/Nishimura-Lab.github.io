@@ -1,0 +1,54 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><head><title>システムデザイン 第08回</title><link rel="stylesheet" type="text/css" href="../../../../css/WebNote.css"/><script type="text/javascript" src="//typesquare.com/3/tsst/script/ja/typesquare.js?6BWGiwGCtww%3D" charset="utf-8"/><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-99016145-1', 'auto');ga('send', 'pageview');</script></head><body><br/><a href="../index.html">一覧に戻る</a><br/><div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/08/Whole0.png"/>
+
+</div>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/Figure/6-23+.png"/>
+
+</div>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/08/Whole1.png"/>
+
+</div>
+<h2 id="クラス図の注意点">04 クラス図の注意点</h2>
+<h3 id="オブジェクト指向との関連">オブジェクト指向との関連</h3>
+<p>UMLはオブジェクト指向と相性が良い</p>
+<h3 id="オブジェクト指向プログラミングの特徴">オブジェクト指向プログラミングの特徴</h3>
+<h4 id="カプセル化">カプセル化</h4>
+<p>公開する必要のない部分は隠す</p>
+<blockquote>
+<p>P.139中～</p>
+</blockquote>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/Figure/6-24.png"/>
+
+</div>
+<p>strPasswordをプロパティとして公開する（左）より、<br/>
+SetPasswordメソッドを用意した方が（右）が良い</p>
+<h4 id="継承">継承</h4>
+<p>あるクラスと少しだけ違うクラスを定義する</p>
+<blockquote>
+<p>P.140下～</p>
+</blockquote>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/Figure/6-25.png"/>
+
+</div>
+<p>マネージャも社員だが、独自の権限を持っている</p>
+<h4 id="is-a関係とhas-a関係">is-a関係とhas-a関係</h4>
+<p>is a ←→ has a (is part of)</p>
+<p>汎化 ←→ 集約</p>
+<h4 id="多態性ポリモーフィズム">多態性（ポリモーフィズム）</h4>
+<p>同じメソッドでも異なる処理をさせられる</p>
+<blockquote>
+<p>P.141下～</p>
+</blockquote>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/Figure/6-26.png"/>
+
+</div>
+<p><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=XYP-cpVeEkWK4KezivJfyKhOoV0P4m5HrcwdP9wr_dhURE84OTgzWFVNSk40OUJHNEM2SFpVN0hZMy4u">確認問題08-a</a></p>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/08/Whole2.png"/>
+
+</div><hr/><p>教科書（図はすべてこちらより引用）：<br/><b>　竹政昭利 他,「かんたんUML入門」, 技術評論社</b></p><a href="../index.html">一覧に戻る</a><br/><br/></body>
