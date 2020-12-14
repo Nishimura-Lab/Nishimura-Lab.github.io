@@ -1,1 +1,80 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><head><title>システムデザイン 第10回</title><link rel="stylesheet" type="text/css" href="../../../../css/WebNote.css"/><script type="text/javascript" src="//typesquare.com/3/tsst/script/ja/typesquare.js?6BWGiwGCtww%3D" charset="utf-8"/><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-99016145-1', 'auto');ga('send', 'pageview');</script></head><body><br/><a href="../index.html">一覧に戻る</a><br/><hr/><p>教科書（図はすべてこちらより引用）：<br/><b>　竹政昭利 他,「かんたんUML入門」, 技術評論社</b></p><a href="../index.html">一覧に戻る</a><br/><br/></body>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><head><title>システムデザイン 第10回</title><link rel="stylesheet" type="text/css" href="../../../../css/WebNote.css"/><script type="text/javascript" src="//typesquare.com/3/tsst/script/ja/typesquare.js?6BWGiwGCtww%3D" charset="utf-8"/><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-99016145-1', 'auto');ga('send', 'pageview');</script></head><body><br/><a href="../index.html">一覧に戻る</a><br/><div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/Figure/7-0.png"/>
+
+</div>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/10/Whole2.png"/>
+
+</div>
+<h1 id="章-シーケンス図">7章 シーケンス図</h1>
+<h2 id="概要">01 概要</h2>
+<h3 id="シーケンス図">シーケンス図</h3>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/Figure/7-1.png"/>
+
+</div>
+<p>振る舞い＝動的な側面を表す</p>
+<h3 id="シーケンス図とは">シーケンス図とは</h3>
+<p>時間軸にそって相互作用を表現する</p>
+<h2 id="表記法">02 表記法</h2>
+<h3 id="ライフライン">ライフライン</h3>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/Figure/7-2.png"/>
+
+</div>
+<p>役割名：分類子名</p>
+<blockquote>
+<p>P.152下～</p>
+</blockquote>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/Figure/7-3.png"/>
+
+</div>
+<h3 id="メッセージ">メッセージ</h3>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/Figure/7-4.png"/>
+
+</div>
+<h4 id="メッセージ名">メッセージ名</h4>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/Figure/7-5.png"/>
+
+</div>
+<h4 id="戻り値">戻り値</h4>
+<h4 id="引数">引数</h4>
+<h3 id="メッセージの種類">メッセージの種類</h3>
+<h4 id="同期メッセージ">同期メッセージ</h4>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/Figure/7-6.png"/>
+
+</div>
+<h4 id="非同期メッセージ">非同期メッセージ</h4>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/Figure/7-7.png"/>
+
+</div>
+<h4 id="リプライメッセージ">リプライメッセージ</h4>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/Figure/7-8.png"/>
+
+</div>
+<h4 id="生成メッセージ">生成メッセージ</h4>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/Figure/7-9.png"/>
+
+</div>
+<h4 id="ファウンドメッセージ">ファウンドメッセージ</h4>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/Figure/7-10.png"/>
+
+</div>
+<h4 id="ロストメッセージ">ロストメッセージ</h4>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/Figure/7-11.png"/>
+
+</div>
+<p><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=XYP-cpVeEkWK4KezivJfyKhOoV0P4m5HrcwdP9wr_dhUQUtHWDk4SUdQMllRT1JBU1Q3OTNIRUQ0RC4u">確認問題10-a</a></p>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/10/Whole3.png"/>
+
+</div><hr/><p>教科書（図はすべてこちらより引用）：<br/><b>　竹政昭利 他,「かんたんUML入門」, 技術評論社</b></p><a href="../index.html">一覧に戻る</a><br/><br/></body>
