@@ -1,4 +1,121 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><head><title>システムデザイン 第11回</title><link rel="stylesheet" type="text/css" href="../../../../css/WebNote.css"/><script type="text/javascript" src="//typesquare.com/3/tsst/script/ja/typesquare.js?6BWGiwGCtww%3D" charset="utf-8"/><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-99016145-1', 'auto');ga('send', 'pageview');</script></head><body><br/><a href="../index.html">一覧に戻る</a><br/><div class="figure">
 <img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/Figure/7-5+.png"/>
 
+</div>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/11/Whole1.png"/>
+
+</div>
+<h3 id="実行指定">実行指定</h3>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/Figure/7-12.png"/>
+
+</div>
+<blockquote>
+<p>P.161中～</p>
+</blockquote>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/Figure/7-13.png"/>
+
+</div>
+<h3 id="破棄イベント">破棄イベント</h3>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/Figure/7-14.png"/>
+
+</div>
+<h3 id="結合フラグメント">結合フラグメント</h3>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/Figure/7-15.png"/>
+
+</div>
+<p>制御構造を表現する</p>
+<h4 id="ループ">ループ</h4>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/Figure/7-16.png"/>
+
+</div>
+<p>for文相当</p>
+<blockquote>
+<p>P.164中～</p>
+</blockquote>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/Figure/7-17.png"/>
+
+</div>
+<blockquote>
+<p>P.165中～</p>
+</blockquote>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/Figure/7-18.png"/>
+
+</div>
+<h4 id="オルタナティブ">オルタナティブ</h4>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/Figure/7-19.png"/>
+
+</div>
+<p>swich文相当</p>
+<blockquote>
+<p>P.166下～</p>
+</blockquote>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/Figure/7-20.png"/>
+
+</div>
+<h4 id="オプション">オプション</h4>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/Figure/7-21.png"/>
+
+</div>
+<p>if文(else無し)相当</p>
+<blockquote>
+<p>P.168上～</p>
+</blockquote>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/Figure/7-22.png"/>
+
+</div>
+<p><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=XYP-cpVeEkWK4KezivJfyKhOoV0P4m5HrcwdP9wr_dhUNjVTNkgxUDlEUkNRQ0wxQjBKS1NVTlcxNC4u">確認問題11-a</a></p>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/11/Whole2.png"/>
+
+</div>
+<h2 id="シーケンス図の描き方">04 シーケンス図の描き方</h2>
+<h3 id="表現する相互作用を決める">表現する相互作用を決める</h3>
+<p>機能単位で描く</p>
+<h3 id="登場する要素を決める">登場する要素を決める</h3>
+<p>クラス図との関連を考えながら</p>
+<h3 id="相互作用を表現する">相互作用を表現する</h3>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/Figure/7-32.png"/>
+
+</div>
+<p>見にくい</p>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/Figure/7-33.png"/>
+
+</div>
+<p>見やすい</p>
+<h3 id="図の整合性を確認する">図の整合性を確認する</h3>
+<p>シーケンス図とクラス図の整合がとれているか？</p>
+<blockquote>
+<p>P.181中～</p>
+</blockquote>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/Figure/7-34.png"/>
+
+</div>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/11/Whole3.png"/>
+
+</div>
+<p>例えば…</p>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/Figure/7-33+.png"/>
+
+</div>
+<p><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=XYP-cpVeEkWK4KezivJfyKhOoV0P4m5HrcwdP9wr_dhUQjU3Q1hRSUlHSUxaMVQwUEhSOEpKS1pMMS4u">確認問題11-b</a></p>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2020/SystemDesign/11/Whole4.png"/>
+
 </div><hr/><p>教科書（図はすべてこちらより引用）：<br/><b>　竹政昭利 他,「かんたんUML入門」, 技術評論社</b></p><a href="../index.html">一覧に戻る</a><br/><br/></body>
