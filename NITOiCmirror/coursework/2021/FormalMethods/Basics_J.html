@@ -900,9 +900,11 @@ matchに引数を与える際、複数の引数を次のようにカンマで区
 <img src="fig/01-3.png" width="30%" /><br><br>
 
 <!-- CoqIDEをインストールし、スクリーンショットを撮って提出 -->
-<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">レポート1：CoqIDEをインストールし、スクリーンショットを撮って提出</span><br><br>
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">レポート1：Teamsの形式手法チームの課題タブを参照してください</span><br><br>
 
-<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">01↑↓02</span><br><br>
+<br><span style="background: linear-gradient(transparent 0%, #ffff66 0%); font-size:200%; font-weight: bold; ">01↑↓02</span><br><br>
+
+<img src="fig/02-1.png" width="30%" /><br><br>
 
 <div class="doc">
 <a name="lab21"></a><h1 class="section">簡約を用いた証明</h1>
@@ -939,6 +941,13 @@ matchに引数を与える際、複数の引数を次のようにカンマで区
 <div class="code">
 </div>
 
+<!-- ■ -->
+<br>
+<!-- reflexivityは=の両辺が等しいことを証明する -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+reflexivityは=の両辺が等しいことを証明する
+</span><br><br>
+
 <div class="doc">
 実際、<span class="inlinecode"><span class="id" type="tactic">reflexivity</span></span>は<span class="inlinecode"><span class="id" type="tactic">simpl</span></span>よりいくぶん多くのことをやってくれるので、覚えておくと後々便利でしょう。例えば、<span class="inlinecode"><span class="id" type="tactic">reflexivity</span></span> は定義された句を展開したり、右辺と置き換えるといったことを試みます。この違いから、<span class="inlinecode"><span class="id" type="tactic">reflexivity</span></span> が向いているのは、「<span class="inlinecode"><span class="id" type="tactic">reflexivity</span></span> によって全てのゴールが自動的に証明され、<span class="inlinecode"><span class="id" type="tactic">reflexivity</span></span> が見つけて展開した式をあえて見なくてもよい」という場合で、逆に<span class="inlinecode"><span class="id" type="tactic">simpl</span></span>は、我々自身が新しいゴールを読んで理解すべき時（勝手に定義を展開し解釈して欲しくない時）に向いているということになります。 
 </div>
@@ -965,6 +974,12 @@ matchに引数を与える際、複数の引数を次のようにカンマで区
 <br>
 </div>
 
+<!-- ■ -->
+<!-- simplは簡約するだけ -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+simplは簡約するだけ
+</span><br><br>
+
 <div class="doc">
 <a name="lab22"></a><h4 class="section">練習問題: ★, optional (simpl_plus)</h4>
 
@@ -978,7 +993,7 @@ matchに引数を与える際、複数の引数を次のようにカンマで区
 <div class="code">
 
 <br>
-<span class="id" type="keyword">Eval</span> <span class="id" type="tactic">simpl</span> <span class="id" type="keyword">in</span> (<span class="id" type="keyword"><span style="font-family: arial;">∀</span></span> <span class="id" type="var">n</span>:<a class="idref" href="http://coq.inria.fr/distrib/8.3pl5/stdlib/Coq.Init.Datatypes.html#nat"><span class="id" type="inductive">nat</span></a>, <span class="id" type="var">n</span> <a class="idref" href="http://proofcafe.org/sf/Basics_J.html#:nat_scope:x_'+'_x"><span class="id" type="notation">+</span></a> 0 <a class="idref" href="http://coq.inria.fr/distrib/8.3pl5/stdlib/Coq.Init.Logic.html#:type_scope:x_'='_x"><span class="id" type="notation">=</span></a> <span class="id" type="var">n</span>).<br>
+<span class="id" type="keyword">Eval</span> <span class="id" type="tactic">simpl</span> <span class="id" type="keyword">in</span> (<span class="id" type="keyword"><span style="font-family: arial;">∀</span></span> <span class="id" type="var">n</span>:<a class="idref" href="http://coq.inria.fr/distrib/8.3pl5/stdlib/Coq.Init.Datatypes. html#nat"><span class="id" type="inductive">nat</span></a>, <span class="id" type="var">n</span> <a class="idref" href="http://proofcafe.org/sf/Basics_J.html#:nat_scope:x_'+'_x"><span class="id" type="notation">+</span></a> 0 <a class="idref" href="http://coq.inria.fr/distrib/8.3pl5/stdlib/Coq.Init.Logic.html#:type_scope:x_'='_x"><span class="id" type="notation">=</span></a> <span class="id" type="var">n</span>).<br>
 
 <br>
 </div>
@@ -1002,6 +1017,12 @@ matchに引数を与える際、複数の引数を次のようにカンマで区
 <br>
 </div>
 
+<!-- ■ -->
+<!-- plusの定義に戻ると違いが分かる -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+plusの定議に戻ると違いが分かる
+</span><br><br>
+
 <div class="doc">
 <a name="lab23"></a><h1 class="section"><span class="inlinecode"><span class="id" type="tactic">intros</span></span>タクティック</h1>
 
@@ -1013,9 +1034,16 @@ matchに引数を与える際、複数の引数を次のようにカンマで区
 
 <div class="doc">
 単体テストの際には対象の関数に対して特定の引数を渡すわけですが、プログラムの証明を行う上で注意を払うべきポイントは、それが量化子（任意の<span class="inlinecode"><span class="id" type="var">n</span></span>について、など）や仮定（<span class="inlinecode"><span class="id" type="var">m</span>=<span class="id" type="var">n</span></span>と仮定すると）で始まるか、ということです。そのような状況で求められるのは「仮定をたてて証明できる」ことです。例えば「よし、<span class="inlinecode"><span class="id" type="var">n</span></span>を任意の数値としよう」「よし、仮に<span class="inlinecode"><span class="id" type="var">m</span>=<span class="id" type="var">n</span></span>と仮定してみよう」といった具合です。
+<br><br>
+
+<!-- ■ -->
+<!-- テストは具体的な値に対してのみ ←→ 証明はより一般的 -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+テストは具体的な値に対してのみ ←→ 証明はより一般的
+</span>
 
 <br> <br>
-<span class="inlinecode"><span class="id" type="tactic">intros</span></span>タクティックは、このようなことを量化子や仮定をゴールから前提条件にき上げることで実現してくれます。
+<span class="inlinecode"><span class="id" type="tactic">intros</span></span>タクティックは、このようなことを量化子や仮定をゴールから前提条件に移すことで実現してくれます。
 
 <br> <br>
 例えば、以下は同じ定理を少し異なるやり方で証明したものです。 
@@ -1029,6 +1057,12 @@ matchに引数を与える際、複数の引数を次のようにカンマで区
 
 <br>
 </div>
+
+<!-- ■ -->
+<!-- intros n： それをnとすると…（nは任意） -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+intros n: それをnとすると… （nは任意）
+</span><br><br>
 
 <div class="doc">
 次の証明をCoq上で逐次実行し、どのように状況が変化してゴールが導かれるのかをよく観察してください。 
@@ -1095,6 +1129,13 @@ matchに引数を与える際、複数の引数を次のようにカンマで区
 
 <div class="doc">
 証明の1行目は、∀（forall）がついた、つまり「あらゆる<span class="inlinecode"><span class="id" type="var">n</span></span>,<span class="inlinecode"><span class="id" type="var">m</span></span>について」の部分をコンテキストに移しています。2行目は、<span class="inlinecode"><span class="id" type="var">n</span> = <span class="id" type="var">m</span></span>ならば、という仮定をコンテキストに写し、<span class="inlinecode"><span class="id" type="var">H</span></span>という名前をこれに与えています。3行目は、ゴールになっている式(<span class="inlinecode"><span class="id" type="var">n</span> + <span class="id" type="var">n</span> = <span class="id" type="var">m</span> + <span class="id" type="var">m</span></span>)に仮定<span class="inlinecode"><span class="id" type="var">H</span></span>の左側を右側にするような書き換えを施しています。
+<br>
+
+<!-- ■ -->
+<!-- intros H： n=mという仮定をHとすると… -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+intros H: n=mという仮定をHとすると…
+</span>
 
 <br> <br>
 （<span class="inlinecode"><span class="id" type="tactic">rewrite</span></span>の矢印は特に論理に関与していません。単に左側を右側に置き換えているだけです。逆に右側を左側に置き換えたい場合は、<span class="inlinecode"><span class="id" type="tactic">rewrite</span> <span style="font-family: arial;">←</span></span>と書くこともできます。この逆の置き換えも上の証明で試して、Coqの振る舞いがどのように変わるかを観察してください。） 
@@ -1103,6 +1144,12 @@ matchに引数を与える際、複数の引数を次のようにカンマで区
 
 <br>
 </div>
+
+<!-- ■ -->
+<!-- rewrite → : =の左を右に置き換える -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+rewrite → : =左を右に置き換える
+</span><br><br>
 
 <div class="doc">
 <a name="lab25"></a><h4 class="section">練習問題: ★ (plus_id_exercise)</h4>
@@ -1175,6 +1222,9 @@ Admittedコマンドは、Coqに対して「この証明はあきらめたので
 <br>
 </div>
 
+<!-- ■ -->
+<img src="fig/02-2.png" width="30%" /><br><br>
+
 <div class="doc">
 <a name="lab27"></a><h1 class="section">Case分析</h1>
 
@@ -1227,11 +1277,25 @@ Admittedコマンドは、Coqに対して「この証明はあきらめたので
 クティックは二つのサブゴールを作ります。その両方を別々に、Coqを使って定理として証明していくことになります。一つのサブゴールからもう一つへ移動
 するための特別なコマンドは必要ありません。一つ目のサブゴールが証明されれば、それは消えて自動的にもう一つのサブゴールにフォーカスが移ります。この
 証明では、二つに分かれたサブゴールのいずれも<span class="inlinecode"><span class="id" type="tactic">reflexivity</span></span>を1回使うだけで簡単に証明できます。
+<br>
 
-<br> <br>
+<!-- ■ -->
+<!-- destructで場合分けをする -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+destructで場合分けをする
+</span><br>
+
+<br>
 destructについている注釈"<span class="inlinecode"><span class="id" type="keyword">as</span> [| <span class="id" type="var">n'</span>]</span>"は、"イントロパターン"と呼ばれるものです。これはCoqに対して、両方のサブゴールに元<span class="inlinecode"><span class="id" type="var">n</span></span>だった変数をどのような変数名を使って取り入れるかを指示するものです。一般的に<span class="inlinecode">[]</span>の間にあるものは"名前のリスト"で、"<span class="inlinecode">|</span>"によって区切られます。このリストの最初の要素は空ですが、これは<span class="inlinecode"><span class="id" type="var">nat</span></span>の最初のコンストラクタである<span class="inlinecode"><span class="id" type="var">O</span></span>が引数をとらないからです。二つ目のコンストラクタ<span class="inlinecode"><span class="id" type="var">S</span></span>は引数を一つ取りますので、リストの二つ目の要素である<span class="inlinecode"><span class="id" type="var">n'</span></span>を名前に使用します。
+<br>
 
-<br> <br>
+<!-- ■ -->
+<!-- as [] で新たに使う変数を指定する -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+as [] で新たに使う変数を指定する
+</span><br>
+
+<br>
 <span class="inlinecode"><span class="id" type="tactic">destruct</span></span>タクティックは帰納的に定義された型に対して使用できます。例えば、bool値の否定が反射的であること・・・つまり否定の否定が元と同じになることを証明してみましょう。 
 </div>
 <div class="code">
@@ -1298,7 +1362,16 @@ caseのサブゴールからサブゴールへ明示的に移動するための�
 <div class="code">
 
 <br>
+
+<code>
+From Coq Require Export String.<br>
+Open Scope string_scope.
+</code>
+<br>
+
+<!-- old
 <span class="id" type="keyword">Require</span> <a class="idref" href="http://coq.inria.fr/distrib/8.3pl5/stdlib/Coq.Strings.String.html#"><span class="id" type="library">String</span></a>. <span class="id" type="keyword">Open</span> <span class="id" type="keyword">Scope</span> <span class="id" type="var">string_scope</span>.<br>
+-->
 
 <br>
 <span class="id" type="keyword">Ltac</span> <span class="id" type="var">move_to_top</span> <span class="id" type="var">x</span> :=<br>
@@ -1366,6 +1439,12 @@ caseのサブゴールからサブゴールへ明示的に移動するための�
 <br>
 </div>
 
+<!-- ■ -->
+<!-- ↑destructの証明を分かりやすくする工夫 -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+↑destructの証明を分かりやすくする工夫
+</span><br><br>
+
 <div class="doc">
 <a name="lab30"></a><h4 class="section">練習問題: ★★ (andb_true_elim2)</h4>
 
@@ -1407,6 +1486,15 @@ Coq上に証明の経過を記述する際、それをどのようにフォー�
 
 <br>
 </div>
+
+<!-- ■ -->
+<img src="fig/02-3.png" width="30%" /><br><br>
+
+<!-- ■ -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">レポート2：Teamsの形式手法チームの課題タブを参照してください</span><br><br>
+
+<!-- ■ -->
+<br><span style="background: linear-gradient(transparent 0%, #ffff66 0%); font-size:200%; font-weight: bold; ">02↑↓03</span><br><br>
 
 <div class="doc">
 <a name="lab31"></a><h1 class="section">帰納法</h1>
