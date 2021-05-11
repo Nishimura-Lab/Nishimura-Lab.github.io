@@ -1500,6 +1500,10 @@ Coq上に証明の経過を記述する際、それをどのようにフォー�
 <a name="lab31"></a><h1 class="section">帰納法</h1>
 
 </div>
+
+<!-- ■ -->
+<img src="fig/03-1.png" width="30%" /><br><br>
+
 <div class="code">
 
 <br>
@@ -1547,6 +1551,12 @@ Caseによる解析は少しだけうまくいきそうに思えますが、や�
 <br>
 </div>
 
+<!-- ■ -->
+<!-- destructで場合分けをしても証明が進まない -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+destructで場合分けをしても証明が進まない
+</span><br><br>
+
 <div class="doc">
 このような命題を証明する場合 － 実際、数値やリストや、その他の帰納的な定義を持つ型にまつわる証明の多くはそうなのですが － もっとずっと強力な推論規則が必要になります。それが「帰納法」です。
 
@@ -1577,6 +1587,12 @@ Coqでは、それぞれのステップは同じですが順序は逆向きに�
 <br>
 </div>
 
+<!-- ■ -->
+<!-- IHn'は帰納法の仮定“もし…が成り立つなら”を表している -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+IHn'は帰納法の仮定“もし…が成り立つなら”を表している
+</span><br><br>
+
 <div class="doc">
 <span class="inlinecode"><span class="id" type="tactic">destruct</span></span>のように、<span class="inlinecode"><span class="id" type="tactic">induction</span></span>タクティックも<span class="inlinecode"><span class="id" type="keyword">as</span>...</span>句を取り、サブゴールに導入する際の変数の名前を指定することができます。最初のブランチでは<span class="inlinecode"><span class="id" type="var">n</span></span>は<span class="inlinecode">0</span>に置き換えられ、ゴールは<span class="inlinecode">0 + 0 = 0</span>となり、簡約できる状態になります。二つ目のブランチでは、<span class="inlinecode"><span class="id" type="var">n</span></span>は<span class="inlinecode"><span class="id" type="var">S</span> <span class="id" type="var">n'</span></span>に置き換えられ、<span class="inlinecode"><span class="id" type="var">n'</span> + 0 = <span class="id" type="var">n'</span></span>が前提としてコンテキストに付け加えられます。（この際、仮定に<span class="inlinecode"><span class="id" type="var">IHn'</span></span>という名前がつけられます。これは「Induction Hypothesys for <span class="inlinecode"><span class="id" type="var">n'</span></span>（n'についての帰納法の仮定）」というような意味です。二番目のゴールは<span class="inlinecode">(<span class="id" type="var">S</span> <span class="id" type="var">n'</span>) + 0 = <span class="id" type="var">S</span> <span class="id" type="var">n'</span></span>となり、<span class="inlinecode"><span class="id" type="var">S</span> (<span class="id" type="var">n'</span> + 0) = <span class="id" type="var">S</span> <span class="id" type="var">n'</span></span>に簡約されます。ここから、帰納法の仮定<span class="inlinecode"><span class="id" type="var">n'</span> + 0 = <span class="id" type="var">n'</span></span>を使って証明の残りを完成させます。 
 </div>
@@ -1595,6 +1611,12 @@ Coqでは、それぞれのステップは同じですが順序は逆向きに�
 <br>
 </div>
 
+<!-- ■ -->
+<!-- ゴールを分ける点はdestructと同様だが、inductionではコンテキストに仮定が加わる -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+ゴールを分ける点はdestructと同様だが、inductionではコンテキストに仮定が加わる
+</span><br><br>
+
 <div class="doc">
 <a name="lab32"></a><h4 class="section">練習問題: ★★, recommended (basic_induction)</h4>
 
@@ -1605,11 +1627,35 @@ Coqでは、それぞれのステップは同じですが順序は逆向きに�
 <span class="id" type="keyword">Proof</span>.<br>
  <span class="id" type="var">Admitted</span>.<br>
 
+<!-- ■
+  intros n.
+  induction n as [| n'].
+  Case "n = 0".
+    reflexivity.
+  Case "n = S n'".
+    simpl.
+    rewrite -> IHn'.
+    reflexivity.
+  Qed.
+-->
+
 <br>
 <span class="id" type="keyword">Theorem</span> <a name="plus_n_Sm"><span class="id" type="lemma">plus_n_Sm</span></a> : <span class="id" type="keyword"><span style="font-family: arial;">∀</span></span> <span class="id" type="var">n</span> <span class="id" type="var">m</span> : <a class="idref" href="http://coq.inria.fr/distrib/8.3pl5/stdlib/Coq.Init.Datatypes.html#nat"><span class="id" type="inductive">nat</span></a>,<br>
 &nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.3pl5/stdlib/Coq.Init.Datatypes.html#S"><span class="id" type="constructor">S</span></a> (<span class="id" type="var">n</span> <a class="idref" href="http://proofcafe.org/sf/Basics_J.html#:nat_scope:x_'+'_x"><span class="id" type="notation">+</span></a> <span class="id" type="var">m</span>) <a class="idref" href="http://coq.inria.fr/distrib/8.3pl5/stdlib/Coq.Init.Logic.html#:type_scope:x_'='_x"><span class="id" type="notation">=</span></a> <span class="id" type="var">n</span> <a class="idref" href="http://proofcafe.org/sf/Basics_J.html#:nat_scope:x_'+'_x"><span class="id" type="notation">+</span></a> <a class="idref" href="http://proofcafe.org/sf/Basics_J.html#:nat_scope:x_'+'_x"><span class="id" type="notation">(</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.3pl5/stdlib/Coq.Init.Datatypes.html#S"><span class="id" type="constructor">S</span></a> <span class="id" type="var">m</span><a class="idref" href="http://proofcafe.org/sf/Basics_J.html#:nat_scope:x_'+'_x"><span class="id" type="notation">)</span></a>.<br>
 <span class="id" type="keyword">Proof</span>.<br>
  <span class="id" type="var">Admitted</span>.<br>
+
+<!-- ■
+  intros n m.
+  induction n as [| n'].
+  Case "n = 0".
+    reflexivity.
+  Case "n = S n'".
+    simpl.
+    rewrite -> IHn'.
+    reflexivity.
+  Qed.
+-->
 
 <br>
 <span class="id" type="keyword">Theorem</span> <a name="plus_comm"><span class="id" type="lemma">plus_comm</span></a> : <span class="id" type="keyword"><span style="font-family: arial;">∀</span></span> <span class="id" type="var">n</span> <span class="id" type="var">m</span> : <a class="idref" href="http://coq.inria.fr/distrib/8.3pl5/stdlib/Coq.Init.Datatypes.html#nat"><span class="id" type="inductive">nat</span></a>,<br>
@@ -1676,6 +1722,9 @@ Coqでは、それぞれのステップは同じですが順序は逆向きに�
 
 <br>
 </div>
+
+<!-- ■ -->
+<img src="fig/03-2.png" width="30%" /><br><br>
 
 <div class="doc">
 <a name="lab35"></a><h1 class="section">形式的証明と非形式的証明</h1>
@@ -1814,6 +1863,12 @@ Coqはこのような証明を完璧にこなしてくれますが、上の証�
 <br>
 </div>
 
+<!-- ■ -->
+<!-- 形式的な証明が読みにくいのは仕方ないが、できるだけ工夫すべき -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+形式的な証明が読みにくいのは仕方ないが、できるだけ工夫すべき
+</span><br><br>
+
 <div class="doc">
 <a name="lab36"></a><h4 class="section">練習問題: ★★ (plus_comm_informal)</h4>
 
@@ -1911,6 +1966,12 @@ Coqでは（非形式的な数学と同様に）大きな証明は高い頻度�
 <br>
 </div>
 
+<!-- ■ -->
+<!-- Hというサブゴールを設定し、証明後にHを利用している -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+Hというサブゴールを設定し、証明後にHを利用している
+</span><br><br>
+
 <div class="doc">
 <span class="inlinecode"><span class="id" type="tactic">assert</span></span>タクティックは、二つのサブゴールを取り込みます。最初のものは<span class="inlinecode"><span class="id" type="var">H</span>:</span>という接頭辞をつけているように、それ自身を主張するもので、Assertion <span class="inlinecode"><span class="id" type="var">H</span></span>と呼びます。
 （まず注意が必要なのは、上で使用した<span class="inlinecode"><span class="id" type="tactic">destruct</span></span>や<span class="inlinecode"><span class="id" type="tactic">induction</span></span>に<span class="inlinecode"><span class="id" type="keyword">as</span></span>句をつけることで、<span class="inlinecode"><span class="id" type="tactic">assert</span> (0 + <span class="id" type="var">n</span> = <span class="id" type="var">n</span>) <span class="id" type="keyword">as</span> <span class="id" type="var">H</span></span>というようにassertionに名前をつけられることです。
@@ -1938,6 +1999,12 @@ Coqでは（非形式的な数学と同様に）大きな証明は高い頻度�
 <br>
 </div>
 
+<!-- ■ -->
+<!-- plus_commが望む所に適用されない -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+plus_commが望む所に適用されない
+</span><br><br>
+
 <div class="doc">
 <span class="inlinecode"><span class="id" type="var">plus_comm</span></span>を、適用したいポイントに対して使用するには、まず<span class="inlinecode"><span class="id" type="var">n</span> + <span class="id" type="var">m</span> = <span class="id" type="var">m</span> + <span class="id" type="var">n</span></span>で始まるような補助定理（ここでは何とかしようとしている<span class="inlinecode"><span class="id" type="var">m</span></span>と<span class="inlinecode"><span class="id" type="var">n</span></span>を特定するため）を導き、それを望むrewriteに使用します。 
 </div>
@@ -1955,6 +2022,12 @@ Coqでは（非形式的な数学と同様に）大きな証明は高い頻度�
 
 <br>
 </div>
+
+<!-- ■ -->
+<!-- assertを使って意図通りにする -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+assertを使って意図通りにする
+</span><br><br>
 
 <div class="doc">
 <a name="lab40"></a><h4 class="section">練習問題: ★★★★ (mult_comm)</h4>
@@ -2015,6 +2088,15 @@ Coqでは（非形式的な数学と同様に）大きな証明は高い頻度�
 
 <br>
 </div>
+
+<!-- ■ -->
+<img src="fig/03-3.png" width="30%" /><br><br>
+
+<!-- ■ -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">レポート3：Teamsの形式手法チームの課題タブを参照してください</span><br><br>
+
+<!-- ■ -->
+<br><span style="background: linear-gradient(transparent 0%, #ffff66 0%); font-size:200%; font-weight: bold; ">03↑</span><br><br>
 
 <div class="doc">
 <a name="lab42"></a><h1 class="section">さらなる練習問題</h1>
