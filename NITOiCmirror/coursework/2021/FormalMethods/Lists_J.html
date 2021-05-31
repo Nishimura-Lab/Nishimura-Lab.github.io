@@ -1699,6 +1699,10 @@ CoqIdeでは（知りたい語の末尾にカーソルを置いて）Queriesメ�
 <a name="lab67"></a><h1 class="section">オプション</h1>
 
 </div>
+
+<!-- ■ -->
+<img src="fig/06-1.png" width="30%" /><br><br>
+
 <div class="code">
 
 <br>
@@ -1718,10 +1722,24 @@ CoqIdeでは（知りたい語の末尾にカーソルを置いて）Queriesメ�
 <br>
 </div>
 
+<!-- ■ -->
+<!-- Someにはnatが付いてくるが、Noneには何も付いてこない -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+Someにはnatが付いてくるが、Noneには何も付いてこない
+</span><br><br>
+
 <div class="doc">
 <span class="inlinecode"><span class="id" type="var">natoption</span></span> 型の使い途のひとつは、関数からエラーコードを返すことです。例えば、リストの <span class="inlinecode"><span class="id" type="var">n</span></span> 番目の要素を返す関数を書きたいとしましょう。型を <span class="inlinecode"><span class="id" type="var">nat</span> <span style="font-family: arial;">→</span> <span class="id" type="var">natlist</span> <span style="font-family: arial;">→</span> <span class="id" type="var">nat</span></span> としてしまったら、リストが短かすぎた場合でも何か適当な数を返さなければなりません！
    
 </div>
+
+<br>
+<!-- ■ -->
+<!-- 例えば長さ5のリストの10番目を指定された時に何を返すべきか？ -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+例えば長5のリストの10番目を指定された時に何を返すべきか？
+</span><br>
+
 <div class="code">
 
 <br>
@@ -1736,6 +1754,12 @@ CoqIdeでは（知りたい語の末尾にカーソルを置いて）Queriesメ�
 
 <br>
 </div>
+
+<!-- ■ -->
+<!-- （n番目を指定されたらnを減らしながらリストを短くしていく） -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+（n番目を指定されたらnを減らしながらリストを短くしていく）
+</span><br><br>
 
 <div class="doc">
 これに対して、型を <span class="inlinecode"><span class="id" type="var">nat</span> <span style="font-family: arial;">→</span> <span class="id" type="var">natlist</span> <span style="font-family: arial;">→</span> <span class="id" type="var">natoption</span></span> とすれば、リストが短かすぎた場合には <span class="inlinecode"><span class="id" type="var">None</span></span> を返し、リストが十分に長く、 <span class="inlinecode"><span class="id" type="var">n</span></span> 番目の要素が <span class="inlinecode"><span class="id" type="var">a</span></span> であった場合には <span class="inlinecode"><span class="id" type="var">Some</span> <span class="id" type="var">a</span></span> を返すことができます。
@@ -1780,6 +1804,12 @@ CoqIdeでは（知りたい語の末尾にカーソルを置いて）Queriesメ�
 <br>
 </div>
 
+<!-- ■ -->
+<!-- boolのmatchはifで書ける -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+boolのmatchはifで書ける
+</span><br><br>
+
 <div class="doc">
 Coq の条件式(if式)は他の言語に見られるものとほとんど同じですが、少しだけ一般化されています。 Coq には 
 組み込みのブーリアン型がないため、 Coq の条件式では、実際には、構成子のふたつある任意の帰納型に対して分岐をすることができます。条件部の式が
@@ -1790,6 +1820,12 @@ Coq の条件式(if式)は他の言語に見られるものとほとんど同じ
 
 <br>
 </div>
+
+<!-- ■ -->
+<!-- ↑advanced topic -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+↑advanced topic
+</span><br><br>
 
 <div class="doc">
 次の関数は、 <span class="inlinecode"><span class="id" type="var">natoption</span></span> 型から <span class="inlinecode"><span class="id" type="var">nat</span></span> の値を取り出し、 <span class="inlinecode"><span class="id" type="var">None</span></span> の場合には与えられたデフォルト値を返します。
@@ -1806,6 +1842,12 @@ Coq の条件式(if式)は他の言語に見られるものとほとんど同じ
 
 <br>
 </div>
+
+<!-- ■ -->
+<!-- 最終的に欲しいのはnatなので、取り出し関数が必要となる -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+最終的に欲しいのはnatなので、取り出し関数が必要となる
+</span><br><br>
 
 <div class="doc">
 <a name="lab68"></a><h4 class="section">練習問題: ★★ (hd_opt)</h4>
@@ -1939,6 +1981,12 @@ Coq の条件式(if式)は他の言語に見られるものとほとんど同じ
 <br>
 </div>
 
+<!-- ■ -->
+<!-- apply: 利用する/適用する（コンテキスト内の仮定や補題を） -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+apply: 利用する/適用する（コンテキスト内の仮定や補題を）
+</span><br><br>
+
 <div class="doc">
    また、 <span class="inlinecode"><span class="id" type="tactic">apply</span></span> タクティックは、条件付きの仮定や補題にも使うことができます。適用するものに含意が含まれていれば、含意の前提部分が証明すべきサブゴールに加えられます。
    
@@ -1961,6 +2009,14 @@ Coq の条件式(if式)は他の言語に見られるものとほとんど同じ
 この証明で、 <span class="inlinecode"><span class="id" type="tactic">apply</span></span> の代わりに <span class="inlinecode"><span class="id" type="tactic">rewrite</span></span> を使って証明を終えられるか試してみると有益でしょう。
    
 </div>
+
+<br>
+<!-- ■ -->
+<!-- apply eq2でやることはrewriteと似ているが、仮定が付いている所が違う -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+apply eq2でやることはrewriteと似ているが、仮定が付いている所が違う
+</span><br>
+
 <div class="code">
 
 <br>
@@ -1984,6 +2040,12 @@ Coq の条件式(if式)は他の言語に見られるものとほとんど同じ
 <br>
 </div>
 
+<!-- ■ -->
+<!-- 結論部分が同様であればapplyが使える -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+結論部分が同様であればapplyが使える
+</span><br><br>
+
 <div class="doc">
 <a name="lab72"></a><h4 class="section">練習問題: ★★, optional (silly_ex)</h4>
 
@@ -1994,24 +2056,33 @@ Coq の条件式(if式)は他の言語に見られるものとほとんど同じ
 <div class="doc">
 次の証明を <span class="inlinecode"><span class="id" type="tactic">simpl</span></span> を使わずに完成させなさい。 
 </div>
-<div class="code">
 
-<br>
-<span class="id" type="keyword">Theorem</span> <a name="NatList.silly_ex"><span class="id" type="lemma">silly_ex</span></a> :<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id" type="keyword"><span style="font-family: arial;">∀</span></span> <span class="id" type="var">n</span>, <a class="idref" href="http://proofcafe.org/sf/Basics_J.html#evenb"><span class="id" type="definition">evenb</span></a> <span class="id" type="var">n</span> <a class="idref" href="http://coq.inria.fr/distrib/8.3pl5/stdlib/Coq.Init.Logic.html#:type_scope:x_'='_x"><span class="id" type="notation">=</span></a> <a class="idref" href="http://proofcafe.org/sf/Basics_J.html#true"><span class="id" type="constructor">true</span></a> <span style="font-family: arial;">→</span> <a class="idref" href="http://proofcafe.org/sf/Basics_J.html#oddb"><span class="id" type="definition">oddb</span></a> (<a class="idref" href="http://coq.inria.fr/distrib/8.3pl5/stdlib/Coq.Init.Datatypes.html#S"><span class="id" type="constructor">S</span></a> <span class="id" type="var">n</span>) <a class="idref" href="http://coq.inria.fr/distrib/8.3pl5/stdlib/Coq.Init.Logic.html#:type_scope:x_'='_x"><span class="id" type="notation">=</span></a> <a class="idref" href="http://proofcafe.org/sf/Basics_J.html#true"><span class="id" type="constructor">true</span></a>) <span style="font-family: arial;">→</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://proofcafe.org/sf/Basics_J.html#evenb"><span class="id" type="definition">evenb</span></a> 3 <a class="idref" href="http://coq.inria.fr/distrib/8.3pl5/stdlib/Coq.Init.Logic.html#:type_scope:x_'='_x"><span class="id" type="notation">=</span></a> <a class="idref" href="http://proofcafe.org/sf/Basics_J.html#true"><span class="id" type="constructor">true</span></a> <span style="font-family: arial;">→</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://proofcafe.org/sf/Basics_J.html#oddb"><span class="id" type="definition">oddb</span></a> 4 <a class="idref" href="http://coq.inria.fr/distrib/8.3pl5/stdlib/Coq.Init.Logic.html#:type_scope:x_'='_x"><span class="id" type="notation">=</span></a> <a class="idref" href="http://proofcafe.org/sf/Basics_J.html#true"><span class="id" type="constructor">true</span></a>.<br>
-<span class="id" type="keyword">Proof</span>.<br>
- <span class="id" type="var">Admitted</span>.<br>
-</div>
+<!-- ■ ex -->
+<pre><code><span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+Fixpoint evenb (n:nat) : bool :=
+  match n with
+  | O        => true
+  | S O      => false
+  | S (S n') => evenb n'
+  end.
+Definition oddb (n:nat) : bool   :=   negb (evenb n).
 
-<div class="doc">
-<font size="-2">☐</font> 
-</div>
-<div class="code">
+Theorem silly_ex :
+     (forall n, evenb n = true -> oddb (S n) = true) ->
+     evenb 3 = true ->
+     oddb 4 = true.
+Proof.
+  (* 証明 *)
+Qed.
+</span></code></pre>
+<!--
+intros H eq.
+apply H.
+apply eq.
+-->
 
-<br>
-</div>
+<!-- ■ -->
+<img src="fig/06-2.png" width="30%" /><br><br>
 
 <div class="doc">
 <span class="inlinecode"><span class="id" type="tactic">apply</span></span> タクティックを使う場合には、適用する事実（の帰結部）が、ゴールと完全に一致していなければなりません。例えは、等式の左辺と右辺が入れ替わっているだけでも <span class="inlinecode"><span class="id" type="tactic">apply</span></span> タクティックは使えません。
@@ -2063,6 +2134,22 @@ Coq の条件式(if式)は他の言語に見られるものとほとんど同じ
 <div class="doc">
 <font size="-2">☐</font> 
 </div>
+
+<!-- ■ -->
+<!--
+  intros l l' eq.
+  rewrite -> eq.
+  symmetry.
+  apply rev_involutive.
+-->
+
+<br>
+<!-- ■ -->
+<!-- コンテキスト以外にも、補題や定理をapplyできる -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+コンテキスト以外にも、補題や定理をapplyできる
+</span><br>
+
 <div class="code">
 
 <br>
@@ -2078,15 +2165,30 @@ Coq の条件式(if式)は他の言語に見られるものとほとんど同じ
 <div class="doc">
 <span class="inlinecode"><span class="id" type="tactic">apply</span></span> と <span class="inlinecode"><span class="id" type="tactic">rewrite</span></span> の違いを簡単に説明しなさい。どちらもうまく使えるような場面はありますか？
 
-<br> <br>
-  
 </div>
-<div class="code">
-</div>
+
+<!-- ■ -->
+<pre><code><span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+Theorem apply_rewrite : forall (a b : nat),
+  a = 1 ->
+  b = 1 ->
+  (forall (x y: nat), x = 1 -> y = 1 -> x = y) ->
+    a = b.
+Proof.
+  intros a b eq1 eq2 H.
+  apply H.
+  apply eq1.
+  apply eq2.
+(* or *)
+  rewrite -> eq1.
+  rewrite -> eq2.
+  reflexivity.
+</span></code></pre>
 
 <div class="doc">
 <font size="-2">☐</font> 
 </div>
+
 <div class="code">
 
 <br>
@@ -2119,7 +2221,14 @@ Coq の条件式(if式)は他の言語に見られるものとほとんど同じ
 <br> <br>
     Coq を使って実際に違いを確認してください。
 
-<br> <br>
+<br><br>
+<!-- ■ -->
+<!-- 下のapp_ass'がそれ。introsを少なくしたら同様の証明はできない -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+下のapp_ass'がそれ。introsを少なくしたら同様の証明はできない
+</span><br>
+
+      <br>
     今回の場合では、ふたつの証明の違いはささいものです。これは、 <span class="inlinecode">++</span> 関数の定義が最初の引数だけを見て、ふたつめの引数には特に何もしないからです。しかし、遠からずわかることですが、帰納法の仮定をどちらにするかで証明の成否が分かれることもあるのです。
    
 </div>
@@ -2147,13 +2256,28 @@ Coq の条件式(if式)は他の言語に見られるものとほとんど同じ
 &nbsp;&nbsp;<span class="id" type="tactic">intros</span> <span class="id" type="var">l1</span>. <span class="id" type="tactic">induction</span> <span class="id" type="var">l1</span> <span class="id" type="keyword">as</span> [ | <span class="id" type="var">n</span> <span class="id" type="var">l1'</span>].<br>
  <span class="id" type="var">Admitted</span>.<br>
 </div>
+<div class="code">
+
+<!-- ■ option -->
+<!--
+<pre><code><span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+reflexivity.
+simpl.
+intros l2 l3.
+assert (H: forall l2 l3 : natlist, (l1' ++ l2) ++ l3 = l1' ++ l2 ++ l3 -> n :: (l1' ++ l2) ++ l3 = n :: l1' ++ l2 ++ l3).
+  intros l0 l1 H.
+  rewrite -> H.
+  reflexivity.
+apply H.
+apply IHl1'.
+</span></code></pre>
+-->
+
+<br>
+</div>
 
 <div class="doc">
 <font size="-2">☐</font> 
-</div>
-<div class="code">
-
-<br>
 </div>
 
 <div class="doc">
@@ -2176,6 +2300,16 @@ Coq の条件式(if式)は他の言語に見られるものとほとんど同じ
  <span class="id" type="var">Admitted</span>.<br>
 </div>
 
+<!-- ■ must -->
+<pre><code><span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+destruct m.
+reflexivity.
+reflexivity.
+destruct m.
+reflexivity.
+apply IHn'.
+</span></code></pre>
+
 <div class="doc">
 <font size="-2">☐</font> 
 </div>
@@ -2183,6 +2317,12 @@ Coq の条件式(if式)は他の言語に見られるものとほとんど同じ
 
 <br>
 </div>
+
+<!-- ■ -->
+<!-- この場合はintrosを多くしたら証明が難しい -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+この場合はintrosを多くしたら証明が難しい
+</span><br><br>
 
 <div class="doc">
 <a name="lab78"></a><h4 class="section">練習問題: ★★★, recommended (beq_nat_sym_informal)</h4>
@@ -2209,6 +2349,17 @@ Coq の条件式(if式)は他の言語に見られるものとほとんど同じ
 
 <br>
 </div>
+
+<!-- ■ -->
+<img src="fig/06-3.png" width="30%" /><br><br>
+ 
+<!-- ■ -->
+<!--
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">レポート6：Teamsの形式手法チームの課題タブを参照してください</span><br><br>
+-->
+
+<!-- ■ -->
+<br><span style="background: linear-gradient(transparent 0%, #ffff66 0%); font-size:200%; font-weight: bold; ">06↑</span><br><br>
 
 <div class="doc">
 <a name="lab79"></a><h1 class="section">練習問題: 辞書</h1>
