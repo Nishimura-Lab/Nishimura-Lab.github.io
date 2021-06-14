@@ -1066,6 +1066,10 @@ combine [1,2] [true,false] = [(1,true),(2,false)]
 <a name="lab94"></a><h1 class="section">データとしての関数</h1>
 
 </div>
+
+<!-- ■ -->
+<img src="fig/08-1.png" width="30%" />
+
 <div class="code">
 
 <br>
@@ -1084,7 +1088,15 @@ combine [1,2] [true,false] = [(1,true),(2,false)]
 他の多くの近代的なプログラミング言語（全ての関数型言語を含む）同様、Coqは関数をファーストクラスに属するものとして取り扱います。つまりそれは、
 関数を他の関数の引数として渡したり、結果として関数を返したり、データ構造の中に関数を含めたりすることができるということです。
 
-<br> <br>
+<br>
+
+<!-- ■ -->
+<!-- 関数を値のように扱える -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+関数を値のように扱える
+</span><br>
+
+<br>
     関数を操作する関数を、一般に「高階関数」と呼びます。例えば次のようなものです。 
 </div>
 <div class="code">
@@ -1099,6 +1111,13 @@ combine [1,2] [true,false] = [(1,true),(2,false)]
 <div class="doc">
 ここで引数<span class="inlinecode"><span class="id" type="var">f</span></span>は関数です。<span class="inlinecode"><span class="id" type="var">doit3times</span></span>の内容は、値<span class="inlinecode"><span class="id" type="var">n</span></span>に対して関数<span class="inlinecode"><span class="id" type="var">f</span></span>を3回適用するものです。 
 </div>
+
+<!-- ■ -->
+<!-- doit3times関数の引数として関数fが与えられる -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+doit3times関数の引数として関数fが与えられる
+</span><br><br>
+
 <div class="code">
 
 <br>
@@ -1138,6 +1157,13 @@ combine [1,2] [true,false] = [(1,true),(2,false)]
 <div class="doc">
 <span class="inlinecode"><span style="font-family: arial;">→</span></span>は、型同士の二項演算子ですが、このことはCoqが基本的に引数一つの関数しかサポートしていないことを意味します。さらに、この演算子は右結合であるため、<span class="inlinecode"><span class="id" type="var">plus</span></span>関数の型は<span class="inlinecode"><span class="id" type="var">nat</span> <span style="font-family: arial;">→</span> (<span class="id" type="var">nat</span> <span style="font-family: arial;">→</span> <span class="id" type="var">nat</span>)</span>の省略であると言えます。これをよく読むと"<span class="inlinecode"><span class="id" type="var">plus</span></span>は<span class="inlinecode"><span class="id" type="var">nat</span></span>型の引数を一つ取り、引数が<span class="inlinecode"><span class="id" type="var">nat</span></span>型一つで<span class="inlinecode"><span class="id" type="var">nat</span></span>型を返す関数を返す"と読むことができます。以前の例では<span class="inlinecode"><span class="id" type="var">plus</span></span>に二つの引数を一緒に与えていましたが、もし望むなら最初の一つだけを与えることもできます。これを部分適用といいます。 
 </div>
+
+<!-- ■ -->
+<!-- plusは「引数を1つ与えた戻り値として関数を返している」という見方ができる -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+plus「引数を1つ与えた戻り値として関数を返している」という見方ができる
+</span><br><br>
+
 <div class="code">
 
 <br>
@@ -1163,6 +1189,12 @@ combine [1,2] [true,false] = [(1,true),(2,false)]
 
 <br>
 </div>
+
+<!-- ■ -->
+<!-- advanced topic -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+advanced topic
+</span><br><br>
 
 <div class="doc">
 <a name="lab98"></a><h4 class="section">練習問題: ★★, optional (currying)</h4>
@@ -1264,6 +1296,12 @@ Coqでは、<span class="inlinecode"><span class="id" type="var">f</span> : <spa
 <br>
 </div>
 
+<!-- ■ -->
+<!-- testしてtrueとなる要素のみにして返す -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+testしてtrueとなる要素のみにして返す
+</span><br><br>
+
 <div class="doc">
 例えば、この<span class="inlinecode"><span class="id" type="var">filter</span></span>関数に述語として<span class="inlinecode"><span class="id" type="var">evenb</span></span>と数値のリスト<span class="inlinecode"><span class="id" type="var">l</span></span>を与えると、リスト<span class="inlinecode"><span class="id" type="var">l</span></span>の要素の中で偶数の要素だけがリストとなって帰ります。 
 </div>
@@ -1290,6 +1328,14 @@ Coqでは、<span class="inlinecode"><span class="id" type="var">f</span> : <spa
 <div class="doc">
 この<span class="inlinecode"><span class="id" type="var">filter</span></span>を使うことで、 <span class="inlinecode"><span class="id" type="var">Lists.v</span></span>にある<span class="inlinecode"><span class="id" type="var">countoddmembers</span></span>関数をもっと簡潔に書くことができます。 
 </div>
+
+<br>
+<!-- ■ -->
+<!-- 寄数を数える関数 -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+寄数を数える関数
+</span><br>
+
 <div class="code">
 
 <br>
@@ -1333,6 +1379,12 @@ Coqでは、<span class="inlinecode"><span class="id" type="var">f</span> : <spa
 
 <br>
 </div>
+
+<!-- ■ -->
+<!-- (fun…)の部分は2乗する関数だが名前は無い -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+(fun…)の部分は2乗する関数だが名前は無い
+</span><br><br>
 
 <div class="doc">
 次は無名関数を使った書き換えのもう少しいい例です。 
@@ -1425,6 +1477,9 @@ Coqでは、<span class="inlinecode"><span class="id" type="var">f</span> : <spa
 <br>
 </div>
 
+<!-- ■ -->
+<img src="fig/08-2.png" width="30%" />
+
 <div class="doc">
 <a name="lab103"></a><h2 class="section">マップ（Map）関数</h2>
 
@@ -1453,6 +1508,14 @@ Coqでは、<span class="inlinecode"><span class="id" type="var">f</span> : <spa
 <div class="doc">
 これは、関数<span class="inlinecode"><span class="id" type="var">f</span></span>とリスト<span class="inlinecode"> <span class="id" type="var">l</span> = [<span class="id" type="var">n1</span>, <span class="id" type="var">n2</span>, <span class="id" type="var">n3</span>, ...] </span>を引数にとり、関数<span class="inlinecode"><span class="id" type="var">f</span></span>を<span class="inlinecode"><span class="id" type="var">l</span></span>の各要素に適用した<span class="inlinecode"> [<span class="id" type="var">f</span> <span class="id" type="var">n1</span>, <span class="id" type="var">f</span> <span class="id" type="var">n2</span>, <span class="id" type="var">f</span> <span class="id" type="var">n3</span>,...] </span>というリストを返します。例えばこのようなものです。 
 </div>
+
+<br>
+<!-- ■ -->
+<!-- Xの関数をXのリストに使える -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+Xの関数をXのリストに使える
+</span><br><br>
+
 <div class="code">
 
 <br>
@@ -1617,7 +1680,15 @@ Coqでは、<span class="inlinecode"><span class="id" type="var">f</span> : <spa
 <br>
 <span class="inlinecode">&nbsp;&nbsp;&nbsp;1 + (2 + (3 + (4 + 0))).
 <br> <br>
-</span>    もう少しサンプルを見てください。
+</span>
+
+<!-- ■ -->
+<!-- foldは二項演算子をリストに適用する -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+foldは二項演算子をリストに授用する
+</span><br><br>
+
+もう少しサンプルを見てください。
 
 </div>
 <div class="code">
@@ -1677,6 +1748,17 @@ Coqでは、<span class="inlinecode"><span class="id" type="var">f</span> : <spa
 <span class="id" type="keyword">Definition</span> <a name="constfun"><span class="id" type="definition">constfun</span></a> {<span class="id" type="var">X</span>: <span class="id" type="keyword">Type</span>} (<span class="id" type="var">x</span>: <span class="id" type="var">X</span>) : <a class="idref" href="http://coq.inria.fr/distrib/8.3pl5/stdlib/Coq.Init.Datatypes.html#nat"><span class="id" type="inductive">nat</span></a><span style="font-family: arial;">→</span><span class="id" type="var">X</span> :=<br>
 &nbsp;&nbsp;<span class="id" type="keyword">fun</span> (<span class="id" type="var">k</span>:<a class="idref" href="http://coq.inria.fr/distrib/8.3pl5/stdlib/Coq.Init.Datatypes.html#nat"><span class="id" type="inductive">nat</span></a>) =&gt; <span class="id" type="var">x</span>.<br>
 
+</div>
+
+<br>
+<!-- ■ -->
+<!-- 引数に関係なく、決まった値を返す -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+引数に関係なく、決まった値を返す
+</span><br>
+
+<div class="code">
+
 <br>
 <span class="id" type="keyword">Definition</span> <a name="ftrue"><span class="id" type="definition">ftrue</span></a> := <a class="idref" href="http://proofcafe.org/sf/Poly_J.html#constfun"><span class="id" type="definition">constfun</span></a> <a class="idref" href="http://proofcafe.org/sf/Basics_J.html#true"><span class="id" type="constructor">true</span></a>.<br>
 
@@ -1702,6 +1784,12 @@ Coqでは、<span class="inlinecode"><span class="id" type="var">f</span> : <spa
 
 <br>
 </div>
+
+<!-- ■ -->
+<!-- 関数の定義の一部を書き換える関数 -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+関数の定義の一部を書き換える関数
+</span><br><br>
 
 <div class="doc">
 たとえば、この<span class="inlinecode"><span class="id" type="var">override</span></span>関数を数値から<span class="inlinecode"><span class="id" type="var">bool</span></span>型への関数に以下のように２回適用すると、値が<span class="inlinecode">1</span>と<span class="inlinecode">3</span>のときだけ<span class="inlinecode"><span class="id" type="var">false</span></span>を返し、それ以外はtrueを返すようにすることができます。 
@@ -1765,6 +1853,15 @@ Coqでは、<span class="inlinecode"><span class="id" type="var">f</span> : <spa
 
 <br>
 </div>
+
+<!-- ■ -->
+<img src="fig/08-3.png" width="30%" /><br><br>
+
+<!-- ■ -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">レポート8：Teamsの形式手法チームの課題タブを参照してください</span><br><br>
+
+<!-- ■ -->
+<br><span style="background: linear-gradient(transparent 0%, #ffff66 0%); font-size:200%; font-weight: bold; ">08↑↓09</span><br><br>
 
 <div class="doc">
 <a name="lab111"></a><h1 class="section">さらにCoqについて</h1>
