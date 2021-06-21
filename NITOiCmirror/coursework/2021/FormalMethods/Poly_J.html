@@ -1867,6 +1867,10 @@ foldは二項演算子をリストに授用する
 <a name="lab111"></a><h1 class="section">さらにCoqについて</h1>
 
 </div>
+
+<!-- ■ -->
+<img src="fig/09-1.png" width="30%" /><br><br>
+
 <div class="code">
 
 <br>
@@ -1901,6 +1905,7 @@ foldは二項演算子をリストに授用する
 <div class="doc">
 <span class="inlinecode"><span class="id" type="tactic">unfold</span></span>タクティックは、定義された名前を、その定義の右側の記述に置き換えてくれるものです。  
 </div>
+
 <div class="code">
 
 <br>
@@ -1915,6 +1920,13 @@ foldは二項演算子をリストに授用する
 
 <br>
 </div>
+
+<br>
+<!-- ■ -->
+<!-- 指定した関数を展開 -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+unfold: 指定した関数を展開
+</span><br><br>
 
 <div class="doc">
 今我々は、<span class="inlinecode"><span class="id" type="var">override</span></span>の最初の性質を証明することができるようになりました。もしある関数の引数のある値<span class="inlinecode"><span class="id" type="var">k</span></span>をオーバーライドしてから引数<span class="inlinecode"><span class="id" type="var">k</span></span>を与えると、オーバーライドされた値が帰る、というものです。 
@@ -2003,6 +2015,12 @@ foldは二項演算子をリストに授用する
 <br>
 </div>
 
+<!-- ■ -->
+<!-- 各コンストラクタは独立したものであるべき -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+各コンストラクタは独立したものであるべき
+</span><br><br>
+
 <div class="doc">
 同じ原理が、全ての帰納的に定義された型にあてはまります。全てのコンストラクタは単射で、コンストラクタが違えば同じ値は生まれません。リストについて言えば<span class="inlinecode"><span class="id" type="var">cons</span></span>コンストラクタは単射で、<span class="inlinecode"><span class="id" type="var">nil</span></span>は全ての空でないリストと異なっています。<span class="inlinecode"><span class="id" type="var">bool</span></span>型では、<span class="inlinecode"><span class="id" type="var">true</span></span>と<span class="inlinecode"><span class="id" type="var">false</span></span>は異なるものです（ただ、<span class="inlinecode"><span class="id" type="var">true</span></span>も<span class="inlinecode"><span class="id" type="var">false</span></span>も引数を取らないため、単射かどうか、という議論には意味がありません）。 
 </div>
@@ -2038,6 +2056,12 @@ Coqには、この性質を証明に利用する<span class="inlinecode"><span c
 <br>
 </div>
 
+<!-- ■ -->
+<!-- 完全に一致するか、矛盾が生じているかのどちらか -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+完全に一致するか、矛盾が生じているかのどちらか
+</span><br><br>
+
 <div class="doc">
 <span class="inlinecode"><span class="id" type="tactic">inversion</span></span>タクティックは、このような一般的な説明を読むより、その動きを実際に見てもらったほうが簡単に理解できるでしょう。以下は<span class="inlinecode"><span class="id" type="tactic">inversion</span></span>の使い方を見てもらい、理解するための練習を兼ねた定理の例です。 
 </div>
@@ -2059,6 +2083,13 @@ Coqには、この性質を証明に利用する<span class="inlinecode"><span c
 
 <br>
 </div>
+
+<br>
+<!-- ■ -->
+<!-- inversionでコンストラクタを消せる（1引数の場合、そう見える） -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+inversionでコンストラクタを消せる（1引数の場合、そう見える）
+</span><br><br>
 
 <div class="doc">
 便利なように、<span class="inlinecode"><span class="id" type="tactic">inversion</span></span>タクティックは、等式でつながった複合値を展開して、それぞれを対応する相手に結び付けてくれます。 
@@ -2099,7 +2130,16 @@ Coqには、この性質を証明に利用する<span class="inlinecode"><span c
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 <a class="idref" href="http://proofcafe.org/sf/Basics_J.html#:nat_scope:x_'+'_x"><span class="id" type="notation">+</span></a> 2 <a class="idref" href="http://coq.inria.fr/distrib/8.3pl5/stdlib/Coq.Init.Logic.html#:type_scope:x_'='_x"><span class="id" type="notation">=</span></a> 5.<br>
 <span class="id" type="keyword">Proof</span>.<br>
 &nbsp;&nbsp;<span class="id" type="tactic">intros</span> <span class="id" type="var">n</span> <span class="id" type="var">contra</span>. <span class="id" type="tactic">inversion</span> <span class="id" type="var">contra</span>. <span class="id" type="keyword">Qed</span>.<br>
+</div>
 
+<br>
+<!-- ■ -->
+<!-- 矛盾が生じてる場合、何でも証明できてしまう -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+矛盾が生じてる場合、何でも証明できてしまう
+</span><br>
+
+<div class="code">
 <br>
 <span class="id" type="keyword">Theorem</span> <a name="silly7"><span class="id" type="lemma">silly7</span></a> : <span class="id" type="keyword"><span style="font-family: arial;">∀</span></span> (<span class="id" type="var">n</span> <span class="id" type="var">m</span> : <a class="idref" href="http://coq.inria.fr/distrib/8.3pl5/stdlib/Coq.Init.Datatypes.html#nat"><span class="id" type="inductive">nat</span></a>),<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://proofcafe.org/sf/Basics_J.html#false"><span class="id" type="constructor">false</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.3pl5/stdlib/Coq.Init.Logic.html#:type_scope:x_'='_x"><span class="id" type="notation">=</span></a> <a class="idref" href="http://proofcafe.org/sf/Basics_J.html#true"><span class="id" type="constructor">true</span></a> <span style="font-family: arial;">→</span><br>
@@ -2298,6 +2338,27 @@ Coqには、この性質を証明に利用する<span class="inlinecode"><span c
 <br>
 </div>
 
+<!-- ■excerise -->
+<!--
+Notation "x :: l" := (cons x l) (at level 60, right associativity).
+
+Example sillyex1 : forall (X : Type) (x y z : X) (l j : list X),
+     x :: y :: l = z :: j ->
+     y :: l = x :: j ->
+     x = y.
+Proof.
+  (* 証明 *)
+Qed.
+-->
+<!--
+intros X x y z l j H1 H2.
+inversion H2.
+reflexivity.
+-->
+
+<!-- ■ -->
+<img src="fig/09-2.png" width="30%" /><br><br>
+
 <div class="doc">
 <a name="lab121"></a><h2 class="section">タクティックを仮定に使用する</h2>
 
@@ -2325,6 +2386,13 @@ Coqには、この性質を証明に利用する<span class="inlinecode"><span c
 <br>
 </div>
 
+<br>
+<!-- ■ -->
+<!-- コンテキストの中にsimplを使う -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+コンテキストの中にsimplを使う
+</span><br><br>
+
 <div class="doc">
 同様に、<span class="inlinecode"><span class="id" type="tactic">apply</span> <span class="id" type="var">L</span> <span class="id" type="keyword">in</span> <span class="id" type="var">H</span></span>というタクティックは、ある条件式<span class="inlinecode"><span class="id" type="var">L</span></span> (<span class="inlinecode"><span class="id" type="var">L1</span> <span style="font-family: arial;">→</span> <span class="id" type="var">L2</span></span>といった形の)を、コンテキストにある仮定<span class="inlinecode"><span class="id" type="var">H</span></span>に適用します。しかし普通の<span class="inlinecode"><span class="id" type="tactic">apply</span></span>と異なるのは、<span class="inlinecode"><span class="id" type="tactic">apply</span> <span class="id" type="var">L</span> <span class="id" type="keyword">in</span> <span class="id" type="var">H</span></span>が、<span class="inlinecode"><span class="id" type="var">H</span></span>が<span class="inlinecode"><span class="id" type="var">L1</span></span>とマッチすることを調べ、それに成功したらそれを<span class="inlinecode"><span class="id" type="var">L2</span></span>に書き換えることです。
 
@@ -2348,6 +2416,13 @@ Coqには、この性質を証明に利用する<span class="inlinecode"><span c
 
 <br>
 </div>
+
+<br>
+<!-- ■ -->
+<!-- コンテキストの中にsymmetryやapplyを使う -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+コンテキストの中にsymmetryやapplyを使う
+</span><br><br>
 
 <div class="doc">
 前向きの証明は、与えられたもの（前提や、すでに証明された定理）からスタートして、そのゴールを次々につなげていき、ゴールに達するまでそれを続けま
@@ -2429,6 +2504,14 @@ Coqには、この性質を証明に利用する<span class="inlinecode"><span c
 <div class="doc">
 上の証明で<span class="inlinecode"><span class="id" type="var">sillyfun</span></span>を展開すると、<span class="inlinecode"><span class="id" type="keyword">if</span> (<span class="id" type="var">beq_nat</span> <span class="id" type="var">n</span> 3) <span class="id" type="keyword">then</span> ... <span class="id" type="keyword">else</span> ...</span>で行き詰まることがわかります。そこで、<span class="inlinecode"><span class="id" type="var">n</span></span>が<span class="inlinecode">3</span>である場合とそうでない場合とに<span class="inlinecode"><span class="id" type="tactic">destruct</span> (<span class="id" type="var">beq_nat</span> <span class="id" type="var">n</span> 3)</span>を使って二つのケースに分け、証明を行います。 
 </div>
+
+<br>
+<!-- ■ -->
+<!-- destruct a だけでなく、destruct (f a) の形でも使える -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+destruct a だけでなく、destruct (f a) の形でも使える
+</span><br><br>
+
 <div class="code">
 
 <br>
@@ -2448,6 +2531,16 @@ Coqには、この性質を証明に利用する<span class="inlinecode"><span c
 <div class="doc">
 <font size="-2">☐</font> 
 </div>
+
+<!-- ■demonstration -->
+<!--
+intros X x1 x2 k1 k2 f.
+unfold override.
+destruct (beq_nat k1 k2).
+reflexivity.
+reflexivity.
+-->
+
 <div class="code">
 
 <br>
@@ -2501,6 +2594,14 @@ Coqには、この性質を証明に利用する<span class="inlinecode"><span c
 <a name="lab127"></a><h2 class="section"><span class="inlinecode"><span class="id" type="var">remember</span></span>タクティック</h2>
 
 </div>
+
+<br>
+<!-- ■ -->
+<!-- advanced topic: destructするが、元の値も忘れたくないときにrememberを使う -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+advanced topic: destructするが、元の値も忘れたくないときにrememberを使う
+</span><br>
+
 <div class="code">
 
 <br>
@@ -2687,6 +2788,12 @@ Coqには、この性質を証明に利用する<span class="inlinecode"><span c
 <br>
 </div>
 
+<!-- ■ -->
+<!-- apply trans_eq だけでは変数の対応が定まらないので、それをwithで与える -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+apply trans_eq だけでは変数の対応が定まらないので、それをwithで与える
+</span><br><br>
+
 <div class="doc">
  実際には、このように名前<span class="inlinecode"><span class="id" type="var">m</span></span>を<span class="inlinecode"><span class="id" type="keyword">with</span></span>に与えるということはそれほど多くありません。Coqは多くの場合賢く振舞って、我々の要求を実現してくれます。ちなみにこの上の<span class="inlinecode"><span class="id" type="tactic">apply</span></span>はapply trans_eq with <span class="inlinecode"><span class="id" type="var">c</span>,<span class="id" type="var">d</span></span>と書くこともできます。 
 </div>
@@ -2849,6 +2956,15 @@ Coqには、この性質を証明に利用する<span class="inlinecode"><span c
 
 <br>
 </div>
+
+<!-- ■ -->
+<img src="fig/09-3.png" width="30%" /><br><br>
+    
+<!-- ■ -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">レポート9：Teamsの形式手法チームの課題タブを参照してください</span><br><br>
+    
+<!-- ■ -->
+<br><span style="background: linear-gradient(transparent 0%, #ffff66 0%); font-size:200%; font-weight: bold; ">09↑</span><br><br>
 
 <div class="doc">
 <a name="lab133"></a><h1 class="section">さらなる練習問題</h1>
