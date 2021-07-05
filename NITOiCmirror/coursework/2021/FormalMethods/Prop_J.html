@@ -1500,7 +1500,7 @@ inductionの中身はapply
 <br>
 
 <!-- ■ -->
-<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">レポート：お休みTeamsの形式手法チームの課題タブを参照してください</span><br><br>
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">レポート10：Teamsの形式手法チームの課題タブを参照してください</span><br><br>
 
 <!-- ■ -->
 <br><span style="background: linear-gradient(transparent 0%, #ffff66 0%); font-size:200%; font-weight: bold; ">10↑↓11</span><br><br>
@@ -1509,12 +1509,17 @@ inductionの中身はapply
 <a name="lab162"></a><h2 class="section">帰納法の仮定</h2>
 
 </div>
+
 <div class="code">
 
 <br>
 
 <br>
 </div>
+
+<!-- ■ -->
+<img src="fig/11-1.png" width="30%" /><br><br>
+<br>
 
 <div class="doc">
 この概念において"帰納法の仮定"はどこにあてはまるでしょうか?
@@ -1583,9 +1588,13 @@ inductionの中身はapply
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" type="tactic">apply</span> <span class="id" type="var">IHn'</span>. <span class="id" type="keyword">Qed</span>.<br>
 
 <br>
-
-<br>
 </div>
+
+<!-- ■ -->
+<!-- 中心となる命題に名前をつけておくと証明しやすいし、読みやすい -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+中心となる命題に名前をつけておくと証明しやすいし、読みやすい
+</span><br><br>
 
 <div class="doc">
 このように名前をつける手順は通常の証明では不要です。
@@ -1616,6 +1625,13 @@ inductionの中身はapply
     つぎに、<span class="inlinecode"><span class="id" type="var">n</span></span> が偶数であることを主張する命題 <span class="inlinecode"><span class="id" type="var">even</span> <span class="id" type="var">n</span></span> を( <span class="inlinecode"><span class="id" type="var">evenb</span></span> を使うことで）作りました。
     つまり、"<span class="inlinecode"><span class="id" type="var">n</span></span> が偶数である"を" <span class="inlinecode"><span class="id" type="var">evenb</span></span> が <span class="inlinecode"><span class="id" type="var">n</span></span> を適用されたときに <span class="inlinecode"><span class="id" type="var">true</span></span> を返す"と定義していました。
 
+<br><br>
+<!-- ■ -->
+<!-- evenb関数：true/falseを返すことで偶数を表現 -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+evenb関数： true/falseを返すことで偶数を表現
+</span>
+
 <br> <br>
     偶数性の概念をそのまま定義する別の方法があります。
     <span class="inlinecode"><span class="id" type="var">evenb</span></span> 関数（"ある計算が <span class="inlinecode"><span class="id" type="var">true</span></span> を返すなら、その数は偶数である"）を使って間接的に定義するのではなく、「偶数とは何を意味するか」を根拠を使って直接定義することができるのです。
@@ -1640,6 +1656,12 @@ inductionの中身はapply
 
 <br>
 </div>
+
+<!-- ■ -->
+<!-- Inductiveデータ型で偶数を表現 -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+Inductiveデータ型で偶数を表現
+</span><br><br>
 
 <div class="doc">
 <a name="lab164"></a><h4 class="section">練習問題: ★, optional (four_ev)</h4>
@@ -1799,6 +1821,12 @@ Coqの設計は非常に直交しているので、素朴な命題を根拠と�
 <br>
 </div>
 
+<!-- ■ -->
+<!-- 仮定をdestruct → 帰納法による証明となる -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+仮定をdestruct → 帰納法による証明となる
+</span><br><br>
+
 <div class="doc">
 <a name="lab169"></a><h4 class="section">練習問題: ★ (ev_minus2_n)</h4>
 
@@ -1845,6 +1873,12 @@ Coqの設計は非常に直交しているので、素朴な命題を根拠と�
 
 <br>
 </div>
+
+<!-- ■ -->
+<!-- 当然inductionでも証明可能 -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+当然inductionでも証明可能
+</span><br><br>
 
 <div class="doc">
 (もちろん、 <span class="inlinecode"><span class="id" type="var">even</span> <span class="id" type="var">n</span> <span style="font-family: arial;">→</span> <span class="id" type="var">ev</span> <span class="id" type="var">n</span></span> も成り立つはずです。 どのように証明するかは次の章で説明します。) 
@@ -1960,6 +1994,10 @@ Coqの設計は非常に直交しているので、素朴な命題を根拠と�
 <br>
 </div>
 
+<!-- ■ -->
+<img src="fig/11-2.png" width="30%" /><br><br>
+<br>
+
 <div class="doc">
 「<span class="inlinecode"><span class="id" type="var">n</span>+2</span> が偶数ならば <span class="inlinecode"><span class="id" type="var">n</span></span> も偶数である」という偶数に関する根拠を分析したいとします。
     この種の場合分けに <span class="inlinecode"><span class="id" type="tactic">destruct</span></span> を使ってみたくなるかもしれません。 
@@ -1993,6 +2031,12 @@ Coqの設計は非常に直交しているので、素朴な命題を根拠と�
 
 <br>
 </div>
+
+<!-- ■ -->
+<!-- inversionによる帰納法 -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+inversionによる帰納法
+</span><br><br>
 
 <div class="doc">
 このような <span class="inlinecode"><span class="id" type="tactic">inversion</span></span> の使い方は最初はちょっと謎めいて思えるかもしれません。
@@ -2069,6 +2113,12 @@ Coqの設計は非常に直交しているので、素朴な命題を根拠と�
 
 <br>
 </div>
+
+<!-- ■ -->
+<!-- destructよりinversionの方が多くのことをしてくれる -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+destructよりinversionの方が多くのことをしてくれる
+</span><br><br>
 
 <div class="doc">
 <a name="lab174"></a><h4 class="section">練習問題: ★★★ (ev_ev_even)</h4>
@@ -2182,6 +2232,12 @@ Coqの設計は非常に直交しているので、素朴な命題を根拠と�
 <br>
 </div>
 
+<!-- ■ -->
+<!-- 関数で定義できないが、Inductiveデータ型で定義できるものがある -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+関数で定義できないが、Inductiveデータ型で定義できるものがある
+</span><br><br>
+
 <div class="doc">
 <span class="inlinecode"><span class="id" type="var">MyProp</span></span> の非形式的な定義の最初の3つの節は、帰納的な定義の最初の3つの節に反映されています。
     4つ目の節は、<span class="inlinecode"><span class="id" type="keyword">Inductive</span></span> キーワードによって強制されます。
@@ -2211,6 +2267,12 @@ Coqの設計は非常に直交しているので、素朴な命題を根拠と�
 
 <br>
 </div>
+
+<!-- ■ -->
+<!-- もちろん証明もできる -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+もちろん証明もできる
+</span><br><br>
 
 <div class="doc">
 <a name="lab177"></a><h4 class="section">練習問題: ★★ (MyProp)</h4>
@@ -2339,10 +2401,21 @@ MyPropに関する便利な2つの事実があります。
 <br>
 </div>
 
+<!-- ■ -->
+<img src="fig/11-3.png" width="30%" /><br><br>
+<br>
+
+<!-- ■ -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">レポート11：Teamsの形式手法チームの課題タブを参照してください</span><br><br>
+
+<!-- ■ -->
+<br><span style="background: linear-gradient(transparent 0%, #ffff66 0%); font-size:200%; font-weight: bold; ">11↑↓12</span><br><br>
+
 <div class="doc">
 <a name="lab180"></a><h1 class="section">全体像: Coqの2つの空間</h1>
 
 </div>
+
 <div class="code">
 
 <br>
