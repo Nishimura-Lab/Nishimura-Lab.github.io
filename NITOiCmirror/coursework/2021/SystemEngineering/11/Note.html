@@ -1,0 +1,110 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><head><title>システム工学 第11回</title><link rel="stylesheet" type="text/css" href="../../../../css/WebNote.css"/><script type="text/javascript" src="//typesquare.com/3/tsst/script/ja/typesquare.js?6BWGiwGCtww%3D" charset="utf-8"/><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-99016145-1', 'auto');ga('send', 'pageview');</script></head><body><br/><a href="../index.html">一覧に戻る</a><br/><div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2021/SystemEngineering/Figure/8_0.png"/>
+
+</div>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2021/SystemEngineering/11/Whole1.png"/>
+
+</div>
+<h1 id="第8章-ソフトウェア設計-構成要素の設計">第8章 ソフトウェア設計-構成要素の設計</h1>
+<h2 id="ソフトウェア構成要素の設計">8.1 ソフトウェア構成要素の設計</h2>
+<h2 id="処理の流れの設計">8.2 処理の流れの設計</h2>
+<h3 id="処理の流れとは">1. 処理の流れとは</h3>
+<p>処理 ＝ プログラムロジック ⊃ アルゴリズム</p>
+<blockquote>
+<p>P.138中～</p>
+</blockquote>
+<p>基本要素： 順次 / 繰り返し / 分岐</p>
+<h3 id="フローチャートを用いたロジックの表現">2. フローチャートを用いたロジックの表現</h3>
+<p>省略</p>
+<h2 id="データ設計">8.3 データ設計</h2>
+<h3 id="データ設計の位置づけ">1. データ設計の位置づけ</h3>
+<h3 id="データ保持の方式">2. データ保持の方式</h3>
+<p>多量のデータを扱う → データベースが必要</p>
+<h3 id="プログラムにおけるデータの展開">3. プログラムにおけるデータの展開</h3>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2021/SystemEngineering/Figure/8_3.png"/>
+
+</div>
+<blockquote>
+<p>P.143下～</p>
+</blockquote>
+<p>配列：数が決まっているときに</p>
+<blockquote>
+<p>P.143下～</p>
+</blockquote>
+<p>スタック：後入れ先出し</p>
+<p>キュー：先入れ先出し</p>
+<blockquote>
+<p>P.144上～</p>
+</blockquote>
+<p>リンクリスト、ツリー： 数が決まっていないときに</p>
+<h3 id="データベースの利用">4. データベースの利用</h3>
+<h4 id="a-データベースの役割">(a) データベースの役割</h4>
+<p>単に保管するだけではない</p>
+<h4 id="b-データベースの種類">(b) データベースの種類</h4>
+<p>RDB: Relational Data Base</p>
+<p>テーブル ＝ フィールド x レコード</p>
+<blockquote>
+<p>P.145上～</p>
+</blockquote>
+<p>SQL vs NoSOL</p>
+<h3 id="rdb">5. RDB</h3>
+<h4 id="a-データベースのスキーマ定義">(a) データベースのスキーマ定義</h4>
+<p>スキーマ： テーブル間の関係</p>
+<blockquote>
+<p>P.145下～</p>
+</blockquote>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2021/SystemEngineering/Figure/8_4.png"/>
+
+</div>
+<h4 id="b-データベータの操作">(b) データベータの操作</h4>
+<p>登録 / 削除 / 読み出し / 更新</p>
+<p><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=XYP-cpVeEkWK4KezivJfyKhOoV0P4m5HrcwdP9wr_dhURU5PQ01HTE05TlZZQ085WThVS0xZVjZSWS4u">確認問題11-a</a></p>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2021/SystemEngineering/11/Whole2.png"/>
+
+</div>
+<h2 id="ユーザインタフェースの設計">8.4 ユーザインタフェースの設計</h2>
+<h3 id="ユーザインタフェースとは">1. ユーザインタフェースとは</h3>
+<h3 id="画面の設計">2. 画面の設計</h3>
+<h4 id="a-画面レイアウトと画面操作の統一">(a) 画面レイアウトと画面操作の統一</h4>
+<p>左上 → 左下 → 右下 が自然</p>
+<blockquote>
+<p>P.149中～</p>
+</blockquote>
+<p>入力ミスを考慮する</p>
+<h5 id="b-画面遷移設計">(b) 画面遷移設計</h5>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2021/SystemEngineering/Figure/8_6.png"/>
+
+</div>
+<p>詳しく描くならステートマシン図で</p>
+<blockquote>
+<p>P.149下～</p>
+</blockquote>
+<p>どのイベントでどこへ移るか？</p>
+<blockquote>
+<p>P.150中～</p>
+</blockquote>
+<p>遷移に時間がかかるときは補助情報を</p>
+<h4 id="c-画面表示情報の統一">(c) 画面表示情報の統一</h4>
+<h3 id="ユーザビリティとux">3. ユーザビリティとUX</h3>
+<p>ユーザビリティ＝使用性</p>
+<blockquote>
+<p>P.151上～</p>
+</blockquote>
+<p>開発しやすさよりユーザ目線を大事</p>
+<blockquote>
+<p>P.151中～</p>
+</blockquote>
+<p>UX: User eXperience</p>
+<h3 id="帳票のデザイン">4. 帳票のデザイン</h3>
+<p>省略</p>
+<p><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=XYP-cpVeEkWK4KezivJfyKhOoV0P4m5HrcwdP9wr_dhUQllGS1kwMVZCT1UxUU5CN1E0SU0xRVAxVi4u">確認問題11-b</a></p>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2021/SystemEngineering/11/Whole3.png"/>
+
+</div>
+<p>レポート8</p><hr/><p>教科書（図はすべてこちらより引用）：<br/><b>　平山雅之 他,「ソフトウェア工学」, オーム社</b></p><a href="../index.html">一覧に戻る</a><br/><br/></body>
