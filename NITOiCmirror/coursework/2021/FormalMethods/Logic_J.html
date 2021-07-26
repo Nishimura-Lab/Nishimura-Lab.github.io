@@ -1630,7 +1630,7 @@ inversion H.
 apply H1.
 apply H0.
 -->
- 
+
 <!-- ■ -->
 <img src="fig/13-3.png" width="30%" /><br><br>
 <br>
@@ -1642,6 +1642,11 @@ apply H0.
 <a name="lab237"></a><h1 class="section">存在量化子</h1>
 
 </div>
+
+<!-- ■ -->
+<img src="fig/14-1.png" width="30%" /><br><br>
+<br>
+
 <div class="code">
 
 <br>
@@ -1670,7 +1675,15 @@ apply H0.
      <span class="inlinecode"><span class="id" type="var">P</span> <span class="id" type="var">x</span></span> の根拠を得ることができます。つまりこれは、 <span class="inlinecode"><span class="id" type="var">x</span></span> が性質  <span class="inlinecode"><span class="id" type="var">P</span></span> を
      持っていることの根拠です。
 
-<br> <br>
+<br><br>
+
+<!-- ■ -->
+<!-- forall <-not-> exist -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+forall <-not-> exist
+</span><br>
+
+<br>
     例として、このような存在量化子を持つ命題を見てみましょう。: 
 </div>
 <div class="code">
@@ -1695,6 +1708,12 @@ apply H0.
 
 <br>
 </div>
+
+<!-- ■ -->
+<!-- そうなる値を具体的に示す -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+そうなる値を具体的に示す
+</span><br><br>
 
 <div class="doc">
 Coqの容易な表記法の定義は、存在量化された命題を記述するための、より
@@ -1758,6 +1777,12 @@ Coqの容易な表記法の定義は、存在量化された命題を記述す�
 <br>
 </div>
 
+<!-- ■ -->
+<!-- exists x で証明となる -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+exists x で証明となる
+</span><br><br>
+
 <div class="doc">
 逆に、コンテキストに置かれた仮定の中に存在を示すものがある場合は、
     それを <span class="inlinecode"><span class="id" type="tactic">inversion</span></span> タクティックで取り除くことができます。
@@ -1820,6 +1845,21 @@ Coqの容易な表記法の定義は、存在量化された命題を記述す�
 
 <br>
 </div>
+
+<!-- ■ex with paste -->
+<!--
+Theorem dist_not_exists : forall (X:Type) (P : X -> Prop),
+  (forall x, P x) -> ~ (exists x, ~ P x).
+Proof.
+-->
+<!--
+intros X P x.
+unfold not.
+intros H.
+inversion H.
+apply H0.
+apply x.
+-->
 
 <div class="doc">
 <a name="lab239"></a><h4 class="section">練習問題: ★ (dist_not_exists)</h4>
@@ -1933,6 +1973,12 @@ Coqには、等価という関係すら組み込まれていませんから、�
 
 <br>
 </div>
+
+<!-- ■ -->
+<!-- xとxは同じもの、というあたり前のことを定義している -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+xとxは同じもの、というあたり前のことを定義している
+</span><br><br>
 
 <div class="doc">
 次に定義するのは、標準的な中置記法です（Coqの型引数合成を使用しています）。 
@@ -2051,6 +2097,14 @@ Coqには、等価という関係すら組み込まれていませんから、�
 <a name="lab244"></a><h2 class="section">Inversion 再び</h2>
 
 </div>
+
+<br>
+<!-- ■ -->
+<!-- 省略 -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+省略
+</span><br>
+
 <div class="code">
 
 <br>
@@ -2126,6 +2180,10 @@ Coqには、等価という関係すら組み込まれていませんから、�
 <br>
 </div>
 
+<!-- ■ -->
+<img src="fig/14-2.png" width="30%" /><br><br>
+<br>
+
 <div class="doc">
 <a name="lab245"></a><h1 class="section">命題としての関係</h1>
 
@@ -2183,6 +2241,12 @@ Coqには、等価という関係すら組み込まれていませんから、�
 
 <br>
 </div>
+
+<!-- ■ -->
+<!-- イコールあるいは真に小さい -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+イコールあるいは真に小さい
+</span><br><br>
 
 <div class="doc">
 これはこれで <span class="inlinecode">&lt;=</span> という関係の妥当なな定義だと言えます。しかし少し観察してみると
@@ -2288,6 +2352,12 @@ Coqには、等価という関係すら組み込まれていませんから、�
 <span class="id" type="keyword">Definition</span> <a name="lt"><span class="id" type="definition">lt</span></a> (<span class="id" type="var">n</span> <span class="id" type="var">m</span>:<a class="idref" href="http://coq.inria.fr/distrib/8.3pl5/stdlib/Coq.Init.Datatypes.html#nat"><span class="id" type="inductive">nat</span></a>) := <a class="idref" href="http://proofcafe.org/sf/Logic_J.html#le"><span class="id" type="inductive">le</span></a> (<a class="idref" href="http://coq.inria.fr/distrib/8.3pl5/stdlib/Coq.Init.Datatypes.html#S"><span class="id" type="constructor">S</span></a> <span class="id" type="var">n</span>) <span class="id" type="var">m</span>.<br>
 
 <br>
+<!-- ■ -->
+<!-- +1するとleになる、という定義 -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
++1するとleになる、という定義
+</span><br><br>
+
 <span class="id" type="var">Notation </span><a name="::x_'&lt;'_x"><span class="id" type="notation">"</span></a>m &lt; n" := (<a class="idref" href="http://proofcafe.org/sf/Logic_J.html#lt"><span class="id" type="definition">lt</span></a> <span class="id" type="var">m</span> <span class="id" type="var">n</span>).<br>
 
 <br>
@@ -2706,6 +2776,20 @@ Coq の主な目的の一つは、プログラムが特定の仕様を満たし�
 <br>
 </div>
 
+<!-- ■ex with paste -->
+<!--
+Theorem O_le_n : forall n,
+  0 <= n.
+Proof.
+-->
+<!--
+intros n.
+induction n.
+apply le_n.
+apply le_S.
+apply IHn.
+-->
+
 <div class="doc">
 <a name="lab255"></a><h4 class="section">練習問題: ★★, optional (le_exercises)</h4>
 
@@ -2938,6 +3022,13 @@ Coq の主な目的の一つは、プログラムが特定の仕様を満たし�
 
 <br>
 </div>
+
+<!-- ■ -->
+<img src="fig/14-3.png" width="30%" /><br><br>
+<br>
+
+<!-- ■ -->
+<br><span style="background: linear-gradient(transparent 0%, #ffff66 0%); font-size:200%; font-weight: bold; ">14↑</span><br><br>
 
 <div class="doc">
 <a name="lab258"></a><h1 class="section">選択課題</h1>
