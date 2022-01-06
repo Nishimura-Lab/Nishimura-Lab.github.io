@@ -1,0 +1,126 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><head><title>システムデザイン 第12回</title><link rel="stylesheet" type="text/css" href="../../../../css/WebNote.css"/><script type="text/javascript" src="//typesquare.com/3/tsst/script/ja/typesquare.js?6BWGiwGCtww%3D" charset="utf-8"/><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-99016145-1', 'auto');ga('send', 'pageview');</script></head><body><br/><a href="../index.html">一覧に戻る</a><br/><div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2021/SystemDesign/Figure/9-0.png"/>
+
+</div>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2021/SystemDesign/12/Whole1.png"/>
+
+</div>
+<h1 id="章-ステートマシーン図">9章 ステートマシーン図</h1>
+<h2 id="概要">01 概要</h2>
+<h3 id="ステートマシーン図">ステートマシーン図</h3>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2021/SystemDesign/Figure/9-1.png"/>
+
+</div>
+<h3 id="状態と遷移">状態と遷移</h3>
+<h2 id="基本的な表記法">02 基本的な表記法</h2>
+<h3 id="単純状態">単純状態</h3>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2021/SystemDesign/Figure/9-2.png"/>
+
+</div>
+<h3 id="開始擬似状態">開始擬似状態</h3>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2021/SystemDesign/Figure/9-3.png"/>
+
+</div>
+<h3 id="終了状態">終了状態</h3>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2021/SystemDesign/Figure/9-4.png"/>
+
+</div>
+<h3 id="entryアクション">entryアクション</h3>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2021/SystemDesign/Figure/9-5.png"/>
+
+</div>
+<h3 id="exitアクション">exitアクション</h3>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2021/SystemDesign/Figure/9-6.png"/>
+
+</div>
+<h3 id="doアクティビティ">doアクティビティ</h3>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2021/SystemDesign/Figure/9-7.png"/>
+
+</div>
+<h3 id="外部遷移">外部遷移</h3>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2021/SystemDesign/Figure/9-8.png"/>
+
+</div>
+<blockquote>
+<p>P.209下～</p>
+</blockquote>
+<p>構文：トリガ[ガード] / エフェクト</p>
+<h3 id="内部遷移">内部遷移</h3>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2021/SystemDesign/Figure/9-9.png"/>
+
+</div>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2021/SystemDesign/12/Whole2.png"/>
+
+</div>
+<h2 id="状態の階層化">03 状態の階層化</h2>
+<p>レベル別に表現する</p>
+<h3 id="コンポジット状態とサブ状態">コンポジット状態とサブ状態</h3>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2021/SystemDesign/Figure/9-10.png"/>
+
+</div>
+<p>コンポジット状態の中にサブ状態がある</p>
+<h4 id="サブ状態への外部遷移">サブ状態への外部遷移</h4>
+<h4 id="コンポジット状態のトリガの適用範囲">コンポジット状態のトリガの適用範囲</h4>
+<h4 id="コンポジット状態内の開始擬似状態と終了状態">コンポジット状態内の開始擬似状態と終了状態</h4>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2021/SystemDesign/Figure/9-11.png"/>
+
+</div>
+<p>遷移の矢印が複雑にならないように、うまく使いたい</p>
+<h3 id="直交状態と領域">直交状態と領域</h3>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2021/SystemDesign/Figure/9-12.png"/>
+
+</div>
+<p>並行して動くステートマシン</p>
+<h3 id="直交状態への外部遷移">直交状態への外部遷移</h3>
+<h3 id="直交状態内のサブ状態への外部遷移">直交状態内のサブ状態への外部遷移</h3>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2021/SystemDesign/Figure/9-13.png"/>
+
+</div>
+<p>（省略）</p>
+<h2 id="ステートマシン図の描き方">07 ステートマシン図の描き方</h2>
+<h3 id="ステートマシン図を描く対象を決定する">ステートマシン図を描く対象を決定する</h3>
+<h4 id="システム全体のステートマシン図">システム全体のステートマシン図</h4>
+<h4 id="クラス単位のステートマシン図">クラス単位のステートマシン図</h4>
+<h3 id="状態を抽出する">状態を抽出する</h3>
+<h3 id="トリガを抽出する">トリガを抽出する</h3>
+<h3 id="処理を実行する箇所を特定する">処理を実行する箇所を特定する</h3>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2021/SystemDesign/Figure/9-26.png"/>
+
+</div>
+<blockquote>
+<p>P.231上～</p>
+</blockquote>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2021/SystemDesign/Figure/9-27.png"/>
+
+</div>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2021/SystemDesign/12/Whole3.png"/>
+
+</div>
+<p>例えば…</p>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2021/SystemDesign/Figure/9-27+.png"/>
+
+</div>
+<p><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=XYP-cpVeEkWK4KezivJfyKhOoV0P4m5HrcwdP9wr_dhUMlg3WkxGWFNXTTRXVk5ZWEhPSk1QVjQwSS4u">確認問題12-b</a></p>
+<div class="figure">
+<img src="http://onct.oita-ct.ac.jp/seigyo/nishimura_hp/coursework/2021/SystemDesign/12/Whole4.png"/>
+
+</div><hr/><p>教科書（図はすべてこちらより引用）：<br/><b>　竹政昭利 他,「かんたんUML入門」, 技術評論社</b></p><a href="../index.html">一覧に戻る</a><br/><br/></body>
