@@ -1,0 +1,368 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="Preface_J_files/coqdoc.css" rel="stylesheet" type="text/css">
+<title>ソフトウェアの基礎</title>
+  <!-- Google Analytics -->
+  <script type="text/javascript" async="" src="Preface_J_files/ga.js"></script><script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-6143321-8']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+  <!-- Google Analytics -->
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+<h1 class="libtitle">Preface_J</h1>
+
+<!-- ■ -->
+<img src="fig/01-1.png" width="30%" />
+
+<div class="code">
+</div>
+
+<div class="doc">
+<a name="lab1"></a><h1 class="section">前書き</h1>
+
+</div>
+<div class="code">
+
+<br>
+
+<br>
+</div>
+
+<div class="doc">
+この電子文章は「ソフトウェアの基礎（プログラミングとプログラミング言語の数学的理論）」という、大学後半～院生向けの1学期分の講義のために書かれた
+ものです。この講義では、Coq上で関数プログラミング、論理学、演算の意味論、ラムダ計算、静的型システムの基礎を学ぶことができます。
+
+<br> <br>
+このコースの主な特徴は、教材のテキストがCoqのスクリプトファイルそのものとなっており、学習の進み具合を「形式的」かつ「機械的」にチェックしなが
+ら学んでいくことができる、ということです。このコースでは、Coqのインタラクティブモードを使って、ソースを1行1行追いながら動きを理解していきま
+す。講義のほとんどはCoqで組み立てられ、Coq上で作業し演習するようデザインされています。
+
+<br> <br>
+このファイルは章立てされ整理されており、1学期ぶんの教材として十分で、順番に学習していけるよう、筋道立てて作成されています。さらに加えて、いくつかのトピックについて追加項目があります。 
+</div>
+<div class="code">
+  
+<br>
+</div>
+
+<!-- ■ -->
+<!-- これはこの授業でのコメントです -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+これはこの授業でのコメントです
+</span><br><br>
+
+<div class="doc">
+<a name="lab2"></a><h1 class="section">概要</h1>
+
+</div>
+<div class="code">
+
+<br>
+</div>
+
+<div class="doc">
+このコースは、いくつかの基礎的なテーマから成っています。
+<ul>
+<li> ソフトウェア工学のための、数学に根ざした論理学
+<pre>                論理学                       微積分学
+         --------------------   =   ----------------------------
+           ソフトウェア工学                機械/土木工学
+</pre>
+
+</li>
+</ul>
+特に、帰納的に定義された集合や関係とその帰納的な証明は、コンピュータサイエンスのいたるところで見られます。このコースでは、帰納法をあらゆる角度から分析します。
+<ul>
+<li> 関数プログラミング：ソフトウェア開発者が持つべき道具のうち、重要性が特に増している
+
+<br> <br>
+<ul>
+<li> ソフトウェア開発のメインストリームでの方法論での、先進的なプログラミング手法は、関数プログラミングの影響を日増しに強く受けるようになっています。
+
+<br> <br>
+
+</li>
+<li> 特に永続的なデータ構造を用い、状態の変化を避けることで、並列プログラミングをシンプルなものとすることができます。
+
+<br> <br>
+
+</li>
+</ul>
+
+</li>
+<li> プログラミング言語の基礎（このコースの２番目のパート）
+
+<br> <br>
+<ul>
+<li> 
+表記法　　厳格に表現するテクニック：新しいプログラム言語や、その特色のストレステスト（これは驚くほど普通に行われていることです！）巨大なソフト
+ウェアシステムの多くは基本的なプログラム言語をサブシステムとして持っています（例：正規表現、コマンドラインフォーマット、設定ファイル、SQL、
+Flash,PDFなどなど）
+
+<br> <br>
+
+</li>
+<li> 毎日ソフトウェア作成に使用しているツールに対して、さらに理解を深める。あなたのお気に入りのプログラミング言語が、動作の裏で何を行っているか。
+
+<br> <br>
+
+</li>
+</ul>
+
+</li>
+<li> Coq　実用に十分な証明支援器
+
+<br> <br>
+<ul>
+<li> 証明支援器は、ソフトウェアやハードウェア開発の両方でますます一般的になりつつあります。Coqはそういったツールであるだけでなく、それを徹底的に学ぶことで、他のツールの理解にも大幅に有利になるようなものです。
+
+</li>
+</ul>
+
+</li>
+</ul>
+
+</div>
+<div class="code">
+
+<br>
+</div>
+
+<div class="doc">
+<a name="lab3"></a><h1 class="section">実際の学習について</h1>
+
+</div>
+<div class="code">
+
+<br>
+</div>
+
+<div class="doc">
+<a name="lab4"></a><h2 class="section">章間の依存関係</h2>
+
+</div>
+<div class="code">
+
+<br>
+</div>
+
+<div class="doc">
+章と章の間の依存関係をまとめた図と、学習教材へのパスを、<span class="inlinecode"><span class="id" type="var">deps.html</span></span>にまとめてあります。 
+</div>
+<div class="code">
+
+<br>
+</div>
+
+<div class="doc">
+<a name="lab5"></a><h2 class="section">学習者に要求される知識的前提</h2>
+
+</div>
+<div class="code">
+
+<br>
+</div>
+
+<div class="doc">
+この資料は、学部生から博士課程、研究者までの幅広い読者に読んでもらえることを想定しています。プログラミング言語や論理学について前提としている知識はさほど大きくありませんが、数学の十分な学位があると理解は早まるでしょう。 
+</div>
+<div class="code">
+
+<br>
+</div>
+
+<div class="doc">
+<a name="lab6"></a><h1 class="section">Coqについて</h1>
+
+</div>
+<div class="code">
+
+<br>
+</div>
+
+<div class="doc">
+我々のこのコースでの「研究所」は、Coq証明支援器です。Coqは以下の二つの機能を併せ持っています。
+<ul>
+<li> シンプルでいささか風変わりな（しかしそのぶん表現力がある）プログラミング言語で、しかも
+
+</li>
+<li> 論理学で言うところの仮定（プログラムの動作に関する仮定も含む）からスタートし、その正当性の証拠を導き出すためのツールです。
+
+</li>
+</ul>
+    我々は、この両面を同時に研究していきます。
+
+</div>
+<div class="code">
+
+<br>
+<!-- ■ -->
+<!-- プログラミング言語、かつ、証明を記述できる -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+プログラミング言語、かつ、証明を記述できる
+</span><br>
+  
+<br>
+</div>
+
+<div class="doc">
+<a name="lab7"></a><h2 class="section">学習に必要なもの</h2>
+
+</div>
+<div class="code">
+
+<br>
+</div>
+
+<div class="doc">
+Coqは、Windowsと多くのUNIX変種（LinuxやMacOSを含む）で動きます。具体的には
+<ul>
+<li> Coqホームページにある最新版のCoq。（全てのサンプルソースはバージョン8.3でコンパイルできることが確認されていますが、8.2でもおそらく動きます）
+
+</li>
+<li> Coqを対話的に操作するIDE。現在、以下の二つから選択できます。
+<ul>
+<li> ProofGeneralは、Emacs上に作られたIDEです。すでにEmacsに慣れている人向けのものです。Coqとは別にインストールする必要があります。（詳しくはgoogleで"ProofGeneral"を検索してください）
+
+</li>
+<li> CoqIDEは、スタンドアロンで動作するシンプルなIDEです。Coqと一緒に配布されています。しかしいくつかのプラットホームではGUIライブラリなどの追加パッケージをインストールする必要があります。 
+</li>
+</ul>
+
+</li>
+</ul>
+
+</div>
+<div class="code">
+
+<br>
+</div>
+
+<div class="doc">
+<a name="lab8"></a><h2 class="section">教材となるCoqファイルの入手方法</h2>
+
+</div>
+<div class="code">
+
+<br>
+</div>
+
+<div class="doc">
+この教材のリリース版のソース（CoqスクリプトとHTMLファイル）をtarで固めたものが、以下のURLで取得できます。
+<pre>        http://www.cis.upenn.edu/~bcpierce/sf
+</pre>
+    この資料の一部だけを使用したい場合は、tarファイルとなっているリリース版を展開して使用してください。
+
+</div>
+<div class="code">
+
+<br>
+</div>
+
+<div class="doc">
+<a name="lab9"></a><h1 class="section">練習問題について</h1>
+
+</div>
+<div class="code">
+
+<br>
+</div>
+
+<div class="doc">
+この資料の各章には、たくさんの練習問題がついています。"optional（任意）"と記されたり"recommended（推奨）"とされているもの
+もあります。"任意"とされていない問題までやることで、その章で学ぶべきことを6～8時間（長い章でも）の学習で理解できるようになっています。
+
+<br> <br>
+    練習問題についている"スターレーティング"には、以下のような意味があります。
+<ul>
+<li> ★：多くの読者が1～2分でできる簡単な問題。"推奨"と明示しているものはありませんが、どちらかというと全て"推奨"とされるべきものです。読者は、この問題に取り組んで、このレベルの問題に慣れておくべきです。
+
+<br> <br>
+
+</li>
+<li> ★★：　素直で簡単な問題（5～10分でできるでしょう）
+
+<br> <br>
+
+</li>
+<li> ★★★：　少し考えないといけない問題（15～30分ほどかかるでしょう）
+
+<br> <br>
+
+</li>
+<li> ★★★★：　さらに難しい問題（1～2時間）
+
+</li>
+</ul>
+
+</div>
+<div class="code">
+
+<br>
+</div>
+
+<div class="doc">
+<a name="lab10"></a><h1 class="section">推奨書籍</h1>
+
+</div>
+<div class="code">
+
+<br>
+</div>
+
+<div class="doc">
+「あとがき （<span class="inlinecode"><span class="id" type="var">Postscript</span></span>）」の章に、読んでおいて損はない本、テキストをあげておきました。 
+</div>
+<div class="code">
+
+<br>
+</div>
+
+<div class="doc">
+<a name="lab11"></a><h1 class="section">教育関係者へ</h1>
+
+</div>
+<div class="code">
+
+<br>
+</div>
+
+<div class="doc">
+この資料を自分のコースで使おうと思った場合、ほぼまちがいなくあなたは書き直したり、追加したりしたいところが出てくるでしょう。そういった貢献は大歓迎です。
+
+<br> <br>
+ぜひBenjamin Pierceまでemailをください。そうすれば、あなた用のsubversionのリポジトリとメーリングリストのアカウントを用意します。リポジトリには、READMEファイルがありますので、次にどうすべきかはそれを参照してください。 
+</div>
+<div class="code">
+
+<br>
+</div>
+</div>
+
+<div id="footer">
+<hr><a href="http://proofcafe.org/sf/index.html">Index</a><hr>This page has been generated by <a href="http://coq.inria.fr/">coqdoc</a><hr>
+<a href="https://github.com/sfja/sfja">ソフトウェアの基礎 日本語化プロジェクト</a>
+</div>
+
+</div>
+
+
+
+</body><div></div></html>
