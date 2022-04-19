@@ -930,14 +930,15 @@ matchに引数を与える際、複数の引数を次のようにカンマで区
 
 <!-- ■ -->
 <!-- CoqIDEをインストールし、スクリーンショットを撮って提出 -->
-<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">レポート1：Teamsの形式手法チームの課題タブを参照してください</span><br><br>
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">Report1：Teamsの形式手法チームの課題タブを参照してください</span><br><br>
     
 <br><span style="background: linear-gradient(transparent 0%, #ffff66 0%); font-size:200%; font-weight: bold; ">01↑↓02</span><br><br>
 
+<!-- 02: 45m 35m -->
+
 <!-- ■ -->
-<!--
+
 <img src="fig/02-1.png" width="30%" /><br><br>
--->
     
 <div class="doc">
 <a name="lab21"></a><h1 class="section">簡約を用いた証明</h1>
@@ -978,7 +979,7 @@ matchに引数を与える際、複数の引数を次のようにカンマで区
 <br>
 <!-- reflexivityは=の両辺が等しいことを証明する -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-
+reflexivityは=の両辺が等しいことを証明する
 </span><br><br>
 
 <div class="doc">
@@ -1010,7 +1011,7 @@ matchに引数を与える際、複数の引数を次のようにカンマで区
 <!-- ■ -->
 <!-- simplは簡約するだけ -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-
+simplは簡約するだけ
 </span><br><br>
 
 <div class="doc">
@@ -1053,7 +1054,7 @@ matchに引数を与える際、複数の引数を次のようにカンマで区
 <!-- ■ -->
 <!-- plusの定義に戻ると違いが分かる -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-
+plusの定義に戻ると違いが分かる
 </span><br><br>
 
 <div class="doc">
@@ -1072,7 +1073,7 @@ matchに引数を与える際、複数の引数を次のようにカンマで区
 <!-- ■ -->
 <!-- テストは具体的な値に対してのみ ←→ 証明はより一般的 -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-
+テストは具体的な値に対してのみ ←→ 証明はより一般的
 </span>
 
 <br> <br>
@@ -1094,7 +1095,7 @@ matchに引数を与える際、複数の引数を次のようにカンマで区
 <!-- ■ -->
 <!-- intros n： それをnとすると…（nは任意） -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-
+intros n: それをnとすると…（nは任意）
 </span><br><br>
 
 <div class="doc">
@@ -1107,7 +1108,7 @@ matchに引数を与える際、複数の引数を次のようにカンマで区
 <span class="id" type="keyword">Proof</span>.<br>
 &nbsp;&nbsp;<span class="id" type="tactic">intros</span> <span class="id" type="var">n</span>. <span class="id" type="tactic">reflexivity</span>. <span class="id" type="keyword">Qed</span>.<br>
 
-<!-- ■ -->
+<!-- ■demo -->
 <!-- あえて証明を消してデモを見せる -->
 
 <br>
@@ -1165,12 +1166,12 @@ matchに引数を与える際、複数の引数を次のようにカンマで区
 
 <div class="doc">
 証明の1行目は、∀（forall）がついた、つまり「あらゆる<span class="inlinecode"><span class="id" type="var">n</span></span>,<span class="inlinecode"><span class="id" type="var">m</span></span>について」の部分をコンテキストに移しています。2行目は、<span class="inlinecode"><span class="id" type="var">n</span> = <span class="id" type="var">m</span></span>ならば、という仮定をコンテキストに写し、<span class="inlinecode"><span class="id" type="var">H</span></span>という名前をこれに与えています。3行目は、ゴールになっている式(<span class="inlinecode"><span class="id" type="var">n</span> + <span class="id" type="var">n</span> = <span class="id" type="var">m</span> + <span class="id" type="var">m</span></span>)に仮定<span class="inlinecode"><span class="id" type="var">H</span></span>の左側を右側にするような書き換えを施しています。
-<br>
+<br><br>
 
 <!-- ■ -->
 <!-- intros H： n=mという仮定をHとすると… -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-
+intros H: n=mという仮定をHとすると…
 </span>
 
 <br> <br>
@@ -1184,7 +1185,7 @@ matchに引数を与える際、複数の引数を次のようにカンマで区
 <!-- ■ -->
 <!-- rewrite → : =の左を右に置き換える -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-
+rewrite-> : =の左を右に置き換える
 </span><br><br>
 
 <div class="doc">
@@ -1210,9 +1211,17 @@ matchに引数を与える際、複数の引数を次のようにカンマで区
 <font size="-2">☐</font> 
 </div>
 <div class="code">
-
 <br>
 </div>
+
+<!--■demo(練習問題) -->
+<!--
+  intros n m o.
+  intros H0 H1.
+  rewrite-> H0.
+  rewrite<- H1.
+  reflexivity.
+-->
 
 <div class="doc">
 Admittedコマンドは、Coqに対して「この証明はあきらめたので、この定理はこれでいいことにしてください」と指示するものです。この機能は、よ
@@ -1254,14 +1263,19 @@ Admittedコマンドは、Coqに対して「この証明はあきらめたので
 <font size="-2">☐</font> 
 </div>
 <div class="code">
-
 <br>
 </div>
 
-<!-- ■ -->
+<!--■demo(練習問題) -->
 <!--
-<img src="fig/02-2.png" width="30%" /><br><br>
+  intros n m.
+  simpl.
+  reflexivity.
 -->
+
+<!-- ■ -->
+
+<img src="fig/02-2.png" width="30%" /><br><br>
 
 <div class="doc">
 <a name="lab27"></a><h1 class="section">Case分析</h1>
@@ -1315,12 +1329,12 @@ Admittedコマンドは、Coqに対して「この証明はあきらめたので
 クティックは二つのサブゴールを作ります。その両方を別々に、Coqを使って定理として証明していくことになります。一つのサブゴールからもう一つへ移動
 するための特別なコマンドは必要ありません。一つ目のサブゴールが証明されれば、それは消えて自動的にもう一つのサブゴールにフォーカスが移ります。この
 証明では、二つに分かれたサブゴールのいずれも<span class="inlinecode"><span class="id" type="tactic">reflexivity</span></span>を1回使うだけで簡単に証明できます。
-<br>
+<br><br>
 
 <!-- ■ -->
 <!-- destructで場合分けをする -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-
+destructで場合分けをする
 </span><br>
 
 <br>
@@ -1372,9 +1386,16 @@ destructについている注釈"<span class="inlinecode"><span class="id" type=
 <font size="-2">☐</font> 
 </div>
 <div class="code">
-
 <br>
 </div>
+
+<!-- ■demo(練習問題) -->
+<!--
+  intros n.
+  destruct n.
+  reflexivity.
+  reflexivity.
+-->
 
 <div class="doc">
 <a name="lab29"></a><h1 class="section">Caseへのネーミング</h1>
@@ -1480,7 +1501,7 @@ Open Scope string_scope.
 <!-- ■ -->
 <!-- ↑destructの証明を分かりやすくする工夫 -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-
+↑destructの証明を分かりやすくする工夫
 </span><br><br>
 
 <div class="doc">
@@ -1506,9 +1527,23 @@ Open Scope string_scope.
 <font size="-2">☐</font> 
 </div>
 <div class="code">
-
 <br>
 </div>
+
+<!-- 難しいのでやらなくていい
+  intros b c.
+  intros H.
+  destruct c.
+  Case "c = true".
+    reflexivity.
+  Case "c = false".
+    rewrite<- H.
+    destruct b.
+    SCase "b = true".
+      reflexivity.
+    SCase "b = false".
+      reflexivity.
+-->
 
 <div class="doc">
 Coq上に証明の経過を記述する際、それをどのようにフォーマットするべきか、ということについてちゃんとしたルールというものはありません。行が分割さ
@@ -1526,14 +1561,14 @@ Coq上に証明の経過を記述する際、それをどのようにフォー�
 </div>
 
 <!-- ■ -->
-<!--
+
 <img src="fig/02-3.png" width="30%" /><br><br>
--->
+
 
 <!-- ■ -->
-<!--
-<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">レポート2：Teamsの形式手法チームの課題タブを参照してください</span><br><br>
--->
+
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">Report2：Teamsの形式手法チームの課題タブを参照してください</span><br><br>
+
 
 <!-- ■ -->
 <br><span style="background: linear-gradient(transparent 0%, #ffff66 0%); font-size:200%; font-weight: bold; ">02↑↓03</span><br><br>
@@ -2142,7 +2177,7 @@ Coqでは（非形式的な数学と同様に）大きな証明は高い頻度�
     
 <!-- ■ -->
 <!--
-<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">レポート3：Teamsの形式手法チームの課題タブを参照してください</span><br><br>
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">Report3：Teamsの形式手法チームの課題タブを参照してください</span><br><br>
 -->
 
 <!-- ■ -->
