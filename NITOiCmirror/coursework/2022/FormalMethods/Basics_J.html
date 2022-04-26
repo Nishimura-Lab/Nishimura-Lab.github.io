@@ -1579,9 +1579,9 @@ Coq上に証明の経過を記述する際、それをどのようにフォー�
 </div>
 
 <!-- ■ -->
-<!--
+
 <img src="fig/03-1.png" width="30%" /><br><br>
--->
+
 
 <div class="code">
 
@@ -1633,7 +1633,7 @@ Caseによる解析は少しだけうまくいきそうに思えますが、や�
 <!-- ■ -->
 <!-- destructで場合分けをしても証明が進まない -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-
+destructで場合けをしてむ証明が進まない
 </span><br><br>
 
 <div class="doc">
@@ -1669,7 +1669,7 @@ Coqでは、それぞれのステップは同じですが順序は逆向きに�
 <!-- ■ -->
 <!-- IHn'は帰納法の仮定“もし…が成り立つなら”を表している -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-
+IHn'は帰納法の仮定“もし…が成り立つなら”を表している
 </span><br><br>
 
 <div class="doc">
@@ -1693,7 +1693,7 @@ Coqでは、それぞれのステップは同じですが順序は逆向きに�
 <!-- ■ -->
 <!-- ゴールを分ける点はdestructと同様だが、inductionではコンテキストに仮定が加わる -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-
+ゴールを分ける点はdestructと同様だが、inductionではコンテキストに仮定が加わる
 </span><br><br>
 
 <div class="doc">
@@ -1724,7 +1724,7 @@ Coqでは、それぞれのステップは同じですが順序は逆向きに�
 <span class="id" type="keyword">Proof</span>.<br>
  <span class="id" type="var">Admitted</span>.<br>
 
-<!-- ■
+<!-- ■(asやCaseなしでやってみせるのもよし)
   intros n m.
   induction n as [| n'].
   Case "n = 0".
@@ -1803,14 +1803,18 @@ Coqでは、それぞれのステップは同じですが順序は逆向きに�
 </div>
 
 <!-- ■ -->
-<!--
+
 <img src="fig/03-2.png" width="30%" /><br><br>
--->
+
+<!-- break -->
 
 <div class="doc">
 <a name="lab35"></a><h1 class="section">形式的証明と非形式的証明</h1>
 
 </div>
+
+<!-- ■:冒頭は省略してTheoremからでもOK -->
+
 <div class="code">
 
 <br>
@@ -1947,7 +1951,7 @@ Coqはこのような証明を完璧にこなしてくれますが、上の証�
 <!-- ■ -->
 <!-- 形式的な証明が読みにくいのは仕方ないが、できるだけ工夫すべき -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-
+形式的な証明が読みにくいのは仕方ないが、できるだけ工夫すべき
 </span><br><br>
 
 <div class="doc">
@@ -2050,7 +2054,7 @@ Coqでは（非形式的な数学と同様に）大きな証明は高い頻度�
 <!-- ■ -->
 <!-- Hというサブゴールを設定し、証明後にHを利用している -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-
+Hというサブゴールを設定し、その証明後にHを利用している
 </span><br><br>
 
 <div class="doc">
@@ -2083,7 +2087,7 @@ Coqでは（非形式的な数学と同様に）大きな証明は高い頻度�
 <!-- ■ -->
 <!-- plus_commが望む所に適用されない -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-
+plus_commが望む所に適用されない
 </span><br><br>
 
 <div class="doc">
@@ -2105,9 +2109,9 @@ Coqでは（非形式的な数学と同様に）大きな証明は高い頻度�
 </div>
 
 <!-- ■ -->
-<!-- assertを使って意図通りにする -->
+<!-- assertを使って意図通りにする（Hはintrosしたn,mについての主張） -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-
+assertを使って意図通りにする（Hはintrosしたn,mについて主張）
 </span><br><br>
 
 <div class="doc">
@@ -2171,14 +2175,14 @@ Coqでは（非形式的な数学と同様に）大きな証明は高い頻度�
 </div>
 
 <!-- ■ -->
-<!--
+
 <img src="fig/03-3.png" width="30%" /><br><br>
--->
+
     
 <!-- ■ -->
-<!--
+
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">Report3：Teamsの形式手法チームの課題タブを参照してください</span><br><br>
--->
+
 
 <!-- ■ -->
 <br><span style="background: linear-gradient(transparent 0%, #ffff66 0%); font-size:200%; font-weight: bold; ">03↑</span><br><br>
