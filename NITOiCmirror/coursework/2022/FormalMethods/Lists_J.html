@@ -1023,9 +1023,9 @@ length [10,10,10] = 3
 </div>
 
 <!-- ■ -->
-<!--
+
 <img src="fig/05-1.png" width="30%" /><br><br>
--->
+
 
 <div class="code">
 
@@ -1084,6 +1084,13 @@ length [10,10,10] = 3
 <br>
 </div>
 
+<!-- ■ -->
+<!-- 上の2つはreflexivityのみで出来たが… -->
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
+上の2つはrefexivityのみで出来たが…
+</span><br>
+<br>
+
 <div class="doc">
 ただし、リストに関する興味深い定理の証明には、帰納法が必要になるのが普通です。
    
@@ -1093,6 +1100,7 @@ length [10,10,10] = 3
 <br>
 </div>
 
+<!-- ■省略 -->
 <div class="doc">
 <a name="lab58"></a><h2 class="section">お小言</h2>
 
@@ -1126,7 +1134,7 @@ length [10,10,10] = 3
 <!-- ■ -->
 <!-- 無限個のデータを表現しているが、構成要素は2つだけ -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
+無限個のデータを表現しているが、構成要素は2つだけ
 </span><br>
 
 <br>
@@ -1146,7 +1154,7 @@ length [10,10,10] = 3
 <!-- ■ -->
 <!-- “あるリストについて成り立つと仮定すると、それが一つ長くなってもやはり成り立つ” -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
+あるリストについて成り立つと仮定すると、それが一つ長くなってもやはり成り立つ
 </span><br><br>
 
      大きなリストはそれより小さなリストから作り出され、少しずつ <span class="inlinecode"><span class="id" type="var">nil</span></span> に近付いて行きます。よって、このふたつのことからすべてのリスト <span class="inlinecode"><span class="id" type="var">l</span></span> に関して <span class="inlinecode"><span class="id" type="var">P</span></span> が真であることが言えます。具体的な例で説明しましょう。
@@ -1170,7 +1178,7 @@ length [10,10,10] = 3
 <!-- ■ -->
 <!-- l1とl2を先に結合してもl2とl3を先に結合しても同じ -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
+l1とl2を先に結合してもl2とl3を先に結合しても同じ
 </span><br><br>
 
 <div class="doc">
@@ -1238,9 +1246,9 @@ length [10,10,10] = 3
 </div>
 
 <!-- ■ -->
-<!--
+
 <img src="fig/05-2.png" width="30%" /><br><br>
--->
+
 
 <div class="doc">
 リストに対する帰納的証明のもう少し入り組んだ例を見てみましょう。リストの右側に <span class="inlinecode"><span class="id" type="var">cons</span></span> する関数 <span class="inlinecode"><span class="id" type="var">snoc</span></span> を定義したとしましょう。 
@@ -1250,7 +1258,7 @@ length [10,10,10] = 3
 <!-- ■ -->
 <!-- consを逆から読んでsnoc -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
+consを逆から読んでsnoc
 </span><br>
 
 <div class="code">
@@ -1314,7 +1322,7 @@ cons n l <-> snoc l n
 <!-- ■ -->
 <!-- lengthとsnocの関係がわからない -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
+lengthとsnocの関係がわからない
 </span><br><br>
 
 <div class="doc">
@@ -1500,7 +1508,7 @@ cons n l <-> snoc l n
 <!-- ■ -->
 <!-- CoqIdeでは（知りたい語の末尾にカーソルを置いて）Queriesメニュー → Search -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
+CoqIdeでは、（知りたい語の末尾にカーソルを置いて）Queriesメニュー
 </span><br><br>
 
 <div class="doc">
@@ -1546,11 +1554,43 @@ cons n l <-> snoc l n
 <span class="id" type="keyword">Proof</span>.<br>
  <span class="id" type="var">Admitted</span>.<br>
 
+<!--
+  intros l.
+  induction l.
+  reflexivity.
+  simpl.
+  rewrite-> IHl.
+  reflexivity.
+-->
+
 <br>
 <span class="id" type="keyword">Theorem</span> <a name="NatList.rev_involutive"><span class="id" type="lemma">rev_involutive</span></a> : <span class="id" type="keyword"><span style="font-family: arial;">∀</span></span> <span class="id" type="var">l</span> : <a class="idref" href="http://proofcafe.org/sf/Lists_J.html#NatList.natlist"><span class="id" type="inductive">natlist</span></a>,<br>
 &nbsp;&nbsp;<a class="idref" href="http://proofcafe.org/sf/Lists_J.html#NatList.rev"><span class="id" type="definition">rev</span></a> (<a class="idref" href="http://proofcafe.org/sf/Lists_J.html#NatList.rev"><span class="id" type="definition">rev</span></a> <span class="id" type="var">l</span>) <a class="idref" href="http://coq.inria.fr/distrib/8.3pl5/stdlib/Coq.Init.Logic.html#:type_scope:x_'='_x"><span class="id" type="notation">=</span></a> <span class="id" type="var">l</span>.<br>
 <span class="id" type="keyword">Proof</span>.<br>
  <span class="id" type="var">Admitted</span>.<br>
+
+<!--
+Theorem rev_snoc : forall (l : natlist) (n : nat),
+  rev (snoc l n) = n :: rev l.
+Proof.
+  intros l n.
+  induction l.
+  reflexivity.
+  simpl.
+  rewrite-> IHl.
+  reflexivity.
+Qed.
+
+Proof.
+  intros l.
+  induction l.
+  reflexivity.
+  simpl.
+  rewrite-> rev_snoc.
+  rewrite-> IHl.
+  reflexivity.
+Qed.   
+-->
 
 <br>
 <span class="id" type="keyword">Theorem</span> <a name="NatList.distr_rev"><span class="id" type="lemma">distr_rev</span></a> : <span class="id" type="keyword"><span style="font-family: arial;">∀</span></span> <span class="id" type="var">l1</span> <span class="id" type="var">l2</span> : <a class="idref" href="http://proofcafe.org/sf/Lists_J.html#NatList.natlist"><span class="id" type="inductive">natlist</span></a>,<br>
@@ -1731,9 +1771,9 @@ cons n l <-> snoc l n
 </div>
 
 <!-- ■ -->
-<!--
+
 <img src="fig/05-3.png" width="30%" /><br><br>
--->
+
 
 <!-- ■ -->
 <!--
