@@ -1879,9 +1879,9 @@ foldは二項演算子をリストに適用する
 </div>
 
 <!-- ■ -->
-<!--
+
 <img src="fig/09-1.png" width="30%" /><br><br>
--->
+
 
 <div class="code">
 
@@ -1937,7 +1937,7 @@ foldは二項演算子をリストに適用する
 <!-- ■ -->
 <!-- unfold: 指定した関数を展開 -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
+unfold: 指定した関数を展開
 </span><br><br>
 
 <div class="doc">
@@ -2030,7 +2030,7 @@ foldは二項演算子をリストに適用する
 <!-- ■ -->
 <!-- 各コンストラクタは独立したものであるべき -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
+各コンストラクタは独立したものであるべき
 </span><br><br>
 
 <div class="doc">
@@ -2071,7 +2071,7 @@ Coqには、この性質を証明に利用する<span class="inlinecode"><span c
 <!-- ■ -->
 <!-- 完全に一致するか、矛盾が生じているかのどちらか -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
+完全に一致するか、矛盾が生じているかのどちらか
 </span><br><br>
 
 <div class="doc">
@@ -2100,7 +2100,7 @@ Coqには、この性質を証明に利用する<span class="inlinecode"><span c
 <!-- ■ -->
 <!-- inversionでコンストラクタを消せる（1引数の場合、そう見える） -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
+inversionでコンストラクタを消せる（1引数の場合、そう見える）
 </span><br><br>
 
 <div class="doc">
@@ -2136,6 +2136,12 @@ Coqには、この性質を証明に利用する<span class="inlinecode"><span c
 </div>
 <div class="code">
 
+<!-- ■demo
+  intros X x y s l j eq0 eq1.
+  inversion eq1.
+  reflexivity.
+-->
+
 <br>
 <span class="id" type="keyword">Theorem</span> <a name="silly6"><span class="id" type="lemma">silly6</span></a> : <span class="id" type="keyword"><span style="font-family: arial;">∀</span></span> (<span class="id" type="var">n</span> : <a class="idref" href="http://coq.inria.fr/distrib/8.3pl5/stdlib/Coq.Init.Datatypes.html#nat"><span class="id" type="inductive">nat</span></a>),<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.3pl5/stdlib/Coq.Init.Datatypes.html#S"><span class="id" type="constructor">S</span></a> <span class="id" type="var">n</span> <a class="idref" href="http://coq.inria.fr/distrib/8.3pl5/stdlib/Coq.Init.Logic.html#:type_scope:x_'='_x"><span class="id" type="notation">=</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.3pl5/stdlib/Coq.Init.Datatypes.html#O"><span class="id" type="constructor">O</span></a> <span style="font-family: arial;">→</span><br>
@@ -2148,7 +2154,7 @@ Coqには、この性質を証明に利用する<span class="inlinecode"><span c
 <!-- ■ -->
 <!-- 矛盾が生じてる場合、何でも証明できてしまう -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
+矛盾が生じてる場合、何でも証明できてしまう
 </span><br>
 
 <div class="code">
@@ -2179,6 +2185,11 @@ Coqには、この性質を証明に利用する<span class="inlinecode"><span c
 <font size="-2">☐</font> 
 </div>
 <div class="code">
+
+<!--
+  intros.
+  inversion H.
+-->
 
 <br>
 </div>
@@ -2321,12 +2332,26 @@ Coqには、この性質を証明に利用する<span class="inlinecode"><span c
 <span class="id" type="keyword">Proof</span>.<br>
  <span class="id" type="var">Admitted</span>.<br>
 
+<!--
+  intros.
+  destruct n.
+  reflexivity.
+  inversion H.
+-->
+
 <br>
 <span class="id" type="keyword">Theorem</span> <a name="beq_nat_0_r"><span class="id" type="lemma">beq_nat_0_r</span></a> : <span class="id" type="keyword"><span style="font-family: arial;">∀</span></span> <span class="id" type="var">n</span>,<br>
 &nbsp;&nbsp;<a class="idref" href="http://proofcafe.org/sf/Basics_J.html#true"><span class="id" type="constructor">true</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.3pl5/stdlib/Coq.Init.Logic.html#:type_scope:x_'='_x"><span class="id" type="notation">=</span></a> <a class="idref" href="http://proofcafe.org/sf/Basics_J.html#beq_nat"><span class="id" type="definition">beq_nat</span></a> <span class="id" type="var">n</span> 0 <span style="font-family: arial;">→</span> 0 <a class="idref" href="http://coq.inria.fr/distrib/8.3pl5/stdlib/Coq.Init.Logic.html#:type_scope:x_'='_x"><span class="id" type="notation">=</span></a> <span class="id" type="var">n</span>.<br>
 <span class="id" type="keyword">Proof</span>.<br>
  <span class="id" type="var">Admitted</span>.<br>
 </div>
+
+<!--
+  intros.
+  destruct n.
+  reflexivity.
+  inversion H.
+-->
 
 <div class="doc">
 <font size="-2">☐</font> 
@@ -2369,9 +2394,9 @@ reflexivity.
 -->
 
 <!-- ■ -->
-<!--
+
 <img src="fig/09-2.png" width="30%" /><br><br>
--->
+
 
 <div class="doc">
 <a name="lab121"></a><h2 class="section">タクティックを仮定に使用する</h2>
@@ -2404,7 +2429,7 @@ reflexivity.
 <!-- ■ -->
 <!-- コンテキストの中にsimplを使う -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
+コンテキストの中にsimplを使う
 </span><br><br>
 
 <div class="doc">
@@ -2435,7 +2460,7 @@ reflexivity.
 <!-- ■ -->
 <!-- コンテキストの中にsymmetryやapplyを使う -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
+コンテキストの中にsymmetryやapplyを使う
 </span><br><br>
 
 <div class="doc">
@@ -2474,6 +2499,8 @@ reflexivity.
 <font size="-2">☐</font> 
 </div>
 <div class="code">
+
+<!-- 難 -->
 
 <br>
 </div>
@@ -2523,7 +2550,7 @@ reflexivity.
 <!-- ■ -->
 <!-- destruct a だけでなく、destruct (f a) の形でも使える -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
+desturct a だけでなく、destruct (f a) の形でも使える
 </span><br><br>
 
 <div class="code">
@@ -2613,7 +2640,7 @@ reflexivity.
 <!-- ■ -->
 <!-- advanced topic: destructするが、元の値も忘れたくないときにrememberを使う -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
+advanced topic: destructするが、元の値も忘れたくないときにrememberを使う
 </span><br>
 
 <div class="code">
@@ -2805,7 +2832,7 @@ reflexivity.
 <!-- ■ -->
 <!-- apply trans_eq だけでは変数の対応が定まらないので、それをwithで与える -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
+apply trans_eq だけでは変数の対応が定まらないので、それをwithで与える
 </span><br><br>
 
 <div class="doc">
@@ -2972,14 +2999,14 @@ reflexivity.
 </div>
 
 <!-- ■ -->
-<!--
+
 <img src="fig/09-3.png" width="30%" /><br><br>
--->
+
 
 <!-- ■ -->
-<!--
-<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">Report9：Teamsの形式手法チームの課題タブを参照してください</span><br><br>
--->
+
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">Report9：今回は～6/28。Teamsの形式手法チームの課題タブを参照してください</span><br><br>
+
 
 <!-- ■ -->
 <br><span style="background: linear-gradient(transparent 0%, #ffff66 0%); font-size:200%; font-weight: bold; ">09↑</span><br><br>
