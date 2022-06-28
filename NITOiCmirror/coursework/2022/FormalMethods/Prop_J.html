@@ -1544,9 +1544,9 @@ Inductiveで定義したデータ型に対して、自動的にinductionルー�
 </div>
 
 <!-- ■ -->
-<!--
+
 <img src="fig/11-1.png" width="30%" /><br><br>
--->
+
 <br>
 
 <div class="doc">
@@ -1621,7 +1621,7 @@ Inductiveで定義したデータ型に対して、自動的にinductionルー�
 <!-- ■ -->
 <!-- 中心となる命題に名前をつけておくと証明しやすいし、読みやすい -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
+中心となる命題に名前をつけておくと証明しやすいし、読みやすい
 </span><br><br>
 
 <div class="doc">
@@ -1657,7 +1657,7 @@ Inductiveで定義したデータ型に対して、自動的にinductionルー�
 <!-- ■ -->
 <!-- evenb関数：true/falseを返すことで偶数を表現 -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
+evenb関数：true/falseをすことで偶数を表現
 </span>
 
 <br> <br>
@@ -1686,9 +1686,9 @@ Inductiveで定義したデータ型に対して、自動的にinductionルー�
 </div>
 
 <!-- ■ -->
-<!-- Inductiveデータ型で偶数を表現 -->
+<!-- Inductiveデータ型で“偶数である”を表現 -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
+Inductiveデータ型で“偶数である”を表現
 </span><br><br>
 
 <div class="doc">
@@ -1708,9 +1708,19 @@ Inductiveで定義したデータ型に対して、自動的にinductionルー�
 &nbsp;&nbsp;<a class="idref" href="http://proofcafe.org/sf/Prop_J.html#ev"><span class="id" type="inductive">ev</span></a> 4.<br>
 <span class="id" type="keyword">Proof</span>.<br>
  <span class="id" type="var">Admitted</span>.<br>
-<span class="id" type="keyword">Definition</span> <a name="four_ev"><span class="id" type="definition">four_ev</span></a> : <a class="idref" href="http://proofcafe.org/sf/Prop_J.html#ev"><span class="id" type="inductive">ev</span></a> 4 :=<br>
+
+<!--
+  apply ev_SS.
+  apply ev_SS.
+  apply ev_0.
+-->
+ <span class="id" type="keyword">Definition</span> <a name="four_ev"><span class="id" type="definition">four_ev</span></a> : <a class="idref" href="http://proofcafe.org/sf/Prop_J.html#ev"><span class="id" type="inductive">ev</span></a> 4 :=<br>
 &nbsp;&nbsp; <a class="idref" href="http://proofcafe.org/sf/Basics_J.html#admit"><span class="id" type="axiom">admit</span></a>.<br>
 </div>
+
+<!--
+  ev_SS 2 (ev_SS 0 ev_0).
+-->
 
 <div class="doc">
 <font size="-2">☐</font> 
@@ -1850,9 +1860,9 @@ Coqの設計は非常に直交しているので、素朴な命題を根拠と�
 </div>
 
 <!-- ■ -->
-<!-- 仮定をdestruct → 帰納法による証明となる -->
+<!-- この場合は仮定をdestructすると帰納法による証明となる -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
+この場合は仮定をdestructすると帰納法による証明となる
 </span><br><br>
 
 <div class="doc">
@@ -1905,7 +1915,7 @@ Coqの設計は非常に直交しているので、素朴な命題を根拠と�
 <!-- ■ -->
 <!-- 当然inductionでも証明可能 -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
+当然inductionでも証明可能
 </span><br><br>
 
 <div class="doc">
@@ -2022,12 +2032,6 @@ Coqの設計は非常に直交しているので、素朴な命題を根拠と�
 <br>
 </div>
 
-<!-- ■ -->
-<!--
-<img src="fig/11-2.png" width="30%" /><br><br>
--->
-<br>
-
 <div class="doc">
 「<span class="inlinecode"><span class="id" type="var">n</span>+2</span> が偶数ならば <span class="inlinecode"><span class="id" type="var">n</span></span> も偶数である」という偶数に関する根拠を分析したいとします。
     この種の場合分けに <span class="inlinecode"><span class="id" type="tactic">destruct</span></span> を使ってみたくなるかもしれません。 
@@ -2065,7 +2069,7 @@ Coqの設計は非常に直交しているので、素朴な命題を根拠と�
 <!-- ■ -->
 <!-- inversionによる帰納法 -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
+inversionによる帰納法
 </span><br><br>
 
 <div class="doc">
@@ -2102,6 +2106,14 @@ Coqの設計は非常に直交しているので、素朴な命題を根拠と�
 
 <br>
 </div>
+
+<!--
+  intros n.
+  intros H.
+  inversion H.
+  inversion H1.
+  apply H3.
+-->
 
 <div class="doc">
 <span class="inlinecode"><span class="id" type="tactic">inversion</span></span> タクティックは、仮定が矛盾していることを示し、ゴールを達成するためにも使えます。
@@ -2147,7 +2159,7 @@ Coqの設計は非常に直交しているので、素朴な命題を根拠と�
 <!-- ■ -->
 <!-- destructよりinversionの方が多くのことをしてくれる -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
+destructよりinversionの方が多くのことをしてくれる
 </span><br><br>
 
 <div class="doc">
@@ -2205,6 +2217,12 @@ Coqの設計は非常に直交しているので、素朴な命題を根拠と�
 
 <br>
 </div>
+
+<!-- ■ -->
+
+<img src="fig/11-2.png" width="30%" /><br><br>
+
+<br>
 
 <div class="doc">
 <a name="lab176"></a><h2 class="section">なぜ命題を帰納的に定義するのか?</h2>
@@ -2265,7 +2283,7 @@ Coqの設計は非常に直交しているので、素朴な命題を根拠と�
 <!-- ■ -->
 <!-- 関数で定義できないが、Inductiveデータ型で定義できるものがある -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
+関数で定義できないが、Inductiveデータ型で定義できるものがある
 </span><br><br>
 
 <div class="doc">
@@ -2301,7 +2319,7 @@ Coqの設計は非常に直交しているので、素朴な命題を根拠と�
 <!-- ■ -->
 <!-- もちろん証明もできる -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
+もちろん証明もできる
 </span><br><br>
 
 <div class="doc">
@@ -2337,7 +2355,7 @@ MyPropに関する便利な2つの事実があります。
 </div>
 
 <div class="doc">
-これらを使って、 <span class="inlinecode"><span class="id" type="var">MyProp</span></span> は全ての奇数について成り立つことと、その逆も成り立つをことを示せます。 
+これらを使って、 <span class="inlinecode"><span class="id" type="var">MyProp</span></span> は全ての偶数について成り立つことと、その逆も成り立つをことを示せます。 
 </div>
 <div class="code">
 
@@ -2432,15 +2450,15 @@ MyPropに関する便利な2つの事実があります。
 </div>
 
 <!-- ■ -->
-<!--
+
 <img src="fig/11-3.png" width="30%" /><br><br>
--->
+
 <br>
 
 <!-- ■ -->
-<!--
+
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">Report10：Teamsの形式手法チームの課題タブを参照してください</span><br><br>
--->
+
 
 <!-- ■ -->
 <br><span style="background: linear-gradient(transparent 0%, #ffff66 0%); font-size:200%; font-weight: bold; ">11↑↓12</span><br><br>
