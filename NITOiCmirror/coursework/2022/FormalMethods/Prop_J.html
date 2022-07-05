@@ -206,9 +206,6 @@
 <div class="code">
 </div>
 
-<!-- 抽象的で分かり難いが、どうにかならないか… -->
-<!-- Reportとしては同じ証明をtacticとobjectで書いてもらうと良さそう -->
-
 <!-- ■ -->
 
 <img src="fig/10-1.png" width="30%" /><br><br>
@@ -2470,9 +2467,9 @@ MyPropに関する便利な2つの事実があります。
 
 <!-- ■ -->
 <br>
-<!--
+
 <img src="fig/12-1.png" width="30%" /><br><br>
--->
+
 
 <div class="code">
 
@@ -2554,7 +2551,7 @@ Coq の式は2つの異なる空間のどちらかに属しています。
 <!-- ■ -->
 <!-- true : bool : Type<br>ev_0 : ev O : Prop -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
+true : bool : Type<br>ev_0 : ev O : Prop
 </span><br><br>
 
 
@@ -2607,7 +2604,7 @@ Coq の式は2つの異なる空間のどちらかに属しています。
 <!-- ■ -->
 <!-- 「全ての値の集合」というものを考えることができるとして話を進める -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
+「全ての値の集合」というものを考えることができるとして話を進める
 </span><br>
 
 <ul>
@@ -2638,9 +2635,9 @@ Coq の式は2つの異なる空間のどちらかに属しています。
 <br> <br>
 
 <!-- ■ -->
-<!-- 値の集合もまた値として扱うことができる -->
+<!-- 値の集合もまた値のように扱うことができる -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
+値の集合もまた値のように扱うことができる
 </span><br><br>
 
     同様に、帰納的な型 <span class="inlinecode"><span class="id" type="var">ev</span></span> の定義は、その数字が偶数であるという根拠となる命題を集めたものの定義です。このことは、全ての <span class="inlinecode"><span class="id" type="var">n</span></span> について、この定義が全ての値の集合から以下の条件を満たす値を全て集めて部分集合 <span class="inlinecode"><span class="id" type="var">ev</span> <span class="id" type="var">n</span></span> を抜き出してくるような定義、ということです。
@@ -2666,7 +2663,7 @@ Coq の式は2つの異なる空間のどちらかに属しています。
 <!-- ■ -->
 <!-- 自然数の集合 nat : Type<br><br>根拠の集合 ev n : Prop -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-自然数の集合 nat : Type<br><br>根拠の集合 ev n : Prop
+自然数集合 nat : Type<br><br>根拠の集合 ev n : Prop
 </span><br><br>
 
 <div class="code">
@@ -2715,7 +2712,7 @@ Coq の式は2つの異なる空間のどちらかに属しています。
 <br> <br>
 
 </li>
-<li> 命題は「論理の世界にいおける型」です。これらは「証明可能（この型の式を書くことができる）」か、「証明不能（そのような式は存在しない）」かのいずれかです。従って「命題が <span class="inlinecode"><span class="id" type="var">true</span></span> である」というような言い方は意味を持ちません。
+<li> 命題は「論理の世界における型」です。これらは「証明可能（この型の式を書くことができる）」か、「証明不能（そのような式は存在しない）」かのいずれかです。従って「命題が <span class="inlinecode"><span class="id" type="var">true</span></span> である」というような言い方は意味を持ちません。
 
 <br> <br>
       我々は時折、命題に対してそれが "true" か "false" というようなことを言ってしまいがちですが、厳格に言えばこれは間違っています。命題は「証明可能かそうでないか」のどちらかです。 
@@ -2729,9 +2726,9 @@ Coq の式は2つの異なる空間のどちらかに属しています。
 </div>
 
 <!-- ■ -->
-<!-- Prop Pが正しい ⇔ Pの根拠を示せる<br><br>Pの根拠を示せてない ⇒ Pが正しいかどうか不明 -->
+<!-- Pの根拠を示せる ⇔ Prop Pが正しい<br><br>Pの根拠を示せてない ⇒ Pが正しいかどうか不明 -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
+Pの根拠を示せる ⇔ Prop Pが正しい<br><br>Pの根拠を示せてない ⇔ Pが正しいかどうか不明
 </span><br><br>
 
 <div class="doc">
@@ -2799,7 +2796,7 @@ Coq の式は2つの異なる空間のどちらかに属しています。
 <!-- ■ -->
 <!-- P->Q の根拠は、Pの根拠を与えたらQの根拠を返す関数 -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
+P->Qの根拠は、Pの根拠を与えたらQの根拠を返す関数
 </span><br>
 
 <div class="code">
@@ -2808,18 +2805,18 @@ Coq の式は2つの異なる空間のどちらかに属しています。
 </div>
 
 <!-- ■ -->
-<!--
+
 <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=XYP-cpVeEkWK4KezivJfyKhOoV0P4m5HrcwdP9wr_dhUNlpNSFlKSThWVEJKN0ZVSkFQNVNWSFBTSC4u"><b>
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%); color: blue;">
 確認問題12a
 </span><br>
 </b></a>
--->
+
 
 <!-- ■ -->
-<!--
+
 <img src="fig/12-2.png" width="30%" /><br><br>
--->
+
 <br>
 
 <div class="doc">
@@ -2867,7 +2864,7 @@ Q: 命題 <span class="inlinecode"><span class="id" type="var">P</span></span> �
 <!-- ■ -->
 <!-- 自然言語での証明は大事なポイントのみを書くべき -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
+自然言語での証明は大事なポイントのみを書くべき
 </span>
 
 <br> <br>
@@ -2989,7 +2986,7 @@ Q: 命題 <span class="inlinecode"><span class="id" type="var">P</span></span> �
 <!-- ■ -->
 <!-- Typeについての帰納法： 各コンストラクタについて証明する -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
+Typeについての帰納法： 各コンストラクタについて証明する
 </span><br>
 
 <div class="code">
@@ -3022,16 +3019,7 @@ Q: 命題 <span class="inlinecode"><span class="id" type="var">P</span></span> �
 
 <br> <br>
 <ul>
-<li> <span class="inlinecode"><span class="id" type="var">Q</span></span> が <span class="inlinecode"><span class="id" type="var">c</span></span> であること
-
-<!-- ■ -->
-<!-- （cがQであること） -->
-<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
-</span>
-　
-
-    を示した最後のルールを仮定して、
+<li> <span class="inlinecode"><span class="id" type="var">Q</span></span> が <span class="inlinecode"><span class="id" type="var">c</span></span> であることを示した最後のルールを仮定して、
              &lt;...ここで <span class="inlinecode"><span class="id" type="var">a</span></span> の全ての型をコンストラクタの定義にある等式と
              共に示し、型 <span class="inlinecode"><span class="id" type="var">Q</span></span> を持つ <span class="inlinecode"><span class="id" type="var">a</span></span> がIHであることをそれぞれ示す。&gt;
              ならば &lt;...ここで再び <span class="inlinecode"><span class="id" type="var">P</span></span> を示す&gt; である。
@@ -3069,29 +3057,13 @@ Q: 命題 <span class="inlinecode"><span class="id" type="var">P</span></span> �
 
 <br> <br>
 <ul>
-  <li>  <span class="inlinecode"><span class="id" type="var">m</span> &lt;= <span class="id" type="var">o</span></span> が <span class="inlinecode"><span class="id" type="var">le_n</span></span> であること
-
-<!-- ■ -->
-<!-- （le_n が m <= o であること） -->
-<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
-</span>
-
-    を示した最後のルールを仮定する。
+  <li>  <span class="inlinecode"><span class="id" type="var">m</span> &lt;= <span class="id" type="var">o</span></span> が <span class="inlinecode"><span class="id" type="var">le_n</span></span> であることを示した最後のルールを仮定する。
               それにより <span class="inlinecode"><span class="id" type="var">m</span> = <span class="id" type="var">o</span></span> であることとその結果が直接導かれる。
 
 <br> <br>
 
 </li>
-  <li> <span class="inlinecode"><span class="id" type="var">m</span> &lt;= <span class="id" type="var">o</span></span> が <span class="inlinecode"><span class="id" type="var">le_S</span></span> であること
-
-<!-- ■ -->
-<!-- （le_S が m <= o であること） -->
-<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
-</span>
-
-    を示した最後のルールを仮定する。
+  <li> <span class="inlinecode"><span class="id" type="var">m</span> &lt;= <span class="id" type="var">o</span></span> が <span class="inlinecode"><span class="id" type="var">le_S</span></span> であることを示した最後のルールを仮定する。
              それにより <span class="inlinecode"><span class="id" type="var">m</span> &lt;= <span class="id" type="var">o'</span></span> を満たす <span class="inlinecode"><span class="id" type="var">o'</span></span> について <span class="inlinecode"><span class="id" type="var">o</span> = <span class="id" type="var">S</span> <span class="id" type="var">o'</span></span> が成り立つ。
              帰納法の仮定法より <span class="inlinecode"><span class="id" type="var">n</span> &lt;= <span class="id" type="var">o'</span></span> である。
 
@@ -3112,23 +3084,28 @@ Q: 命題 <span class="inlinecode"><span class="id" type="var">P</span></span> �
 <!-- ■ -->
 <!-- Propについての帰納法： 各コンストラクタについて証明する<br><br>（つまり、Type/Propにかかわらない） -->
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%);">
-　
+Propについての帰納法： 各コンストラクタについて証明する<br><br>（つまり、Type/Propにかかわらない）
 </span><br><br>
 
 <!-- ■ -->
-<!--
+
 <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=XYP-cpVeEkWK4KezivJfyKhOoV0P4m5HrcwdP9wr_dhUN1Q2RzlMMVI2OE1CT0VIWFVGMzBJMEoxSC4u"><b>
 <span style="background: linear-gradient(transparent 0%, #ffff66 0%); color: blue;">
 確認問題12b
 </span><br>
 </b></a>
--->
+
+
+<!-- ■ -->
+
+<img src="fig/12-3.png" width="30%" /><br><br>
+
+<br>
 
 <!-- ■ -->
 <!--
-<img src="fig/12-3.png" width="30%" /><br><br>
+<span style="background: linear-gradient(transparent 0%, #ffff66 0%);">Report11：Teamsの形式手法チームの課題タブを参照してください</span><br><br>
 -->
-<br>
 
 <!-- ■ -->
 <br><span style="background: linear-gradient(transparent 0%, #ffff66 0%); font-size:200%; font-weight: bold; ">12↑</span><br><br>
